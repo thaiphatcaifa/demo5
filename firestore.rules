@@ -1,0 +1,23 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Đặt phòng: khách GỬI được (create) và Admin ĐỌC được (read);
+    // chặn sửa/xóa từ bên ngoài
+    match /bookings/{id} {
+      allow read, create: if true;
+      allow update, delete: if false;
+    }
+
+    // Nhật ký: ai cũng ĐỌC; cho GHI ở mức lớp học
+    match /posts/{id} {
+      allow read: if true;
+      allow write: if true;   // An toàn THẬT: if request.auth != null (Firebase Auth)
+    }
+
+    // Mọi kho khác: chặn hết
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}

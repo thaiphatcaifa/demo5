@@ -1,0 +1,4015 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+.gitignore
+eslint.config.mjs
+index.html
+jsconfig.json
+netlify.toml
+next.config.mjs
+package.json
+postcss.config.mjs
+public/_redirects
+public/favicon.ico
+public/file.svg
+public/globe.svg
+public/images/1.png
+public/images/10.png
+public/images/11.png
+public/images/12.png
+public/images/13.png
+public/images/14.png
+public/images/15.png
+public/images/16.png
+public/images/17.png
+public/images/18.png
+public/images/19.png
+public/images/2.png
+public/images/20.png
+public/images/21.png
+public/images/22.png
+public/images/23.png
+public/images/24.png
+public/images/25.png
+public/images/26.png
+public/images/27.png
+public/images/28.png
+public/images/29.png
+public/images/3.png
+public/images/30.png
+public/images/31.png
+public/images/32.png
+public/images/33.png
+public/images/34.png
+public/images/35.png
+public/images/36.png
+public/images/37.png
+public/images/38.png
+public/images/39.png
+public/images/4.png
+public/images/40.png
+public/images/41.png
+public/images/42.png
+public/images/5.png
+public/images/6.png
+public/images/7.png
+public/images/8.png
+public/images/9.png
+public/next.svg
+public/vercel.svg
+public/window.svg
+README.md
+SETUP-FIREBASE.md
+src/App.jsx
+src/app/layout.jsx
+src/components/Navbar.jsx
+src/components/NavbarWrapper.jsx
+src/components/Reveal.jsx
+src/components/TiptapEditor.jsx
+src/lib/firebase.js
+src/main.jsx
+src/pages/admin/AdminDashboard.jsx
+src/pages/admin/AdminLayout.jsx
+src/pages/admin/AdminLoginPage.jsx
+src/pages/admin/DatPhongPage.jsx
+src/pages/admin/NhatKyListPage.jsx
+src/pages/admin/SuaPage.jsx
+src/pages/admin/TaoMoiPage.jsx
+src/pages/AmThucPage.jsx
+src/pages/BungalowPage.jsx
+src/pages/DiaHinhPage.jsx
+src/pages/HomePage.jsx
+src/pages/NhatKyPage.jsx
+src/pages/PostDetailPage.jsx
+src/pages/VanHoaPage.jsx
+src/styles/globals.css
+tailwind.config.js
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path=".gitignore">
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+</file>
+
+<file path="eslint.config.mjs">
+import { defineConfig, globalIgnores } from "eslint/config";
+import nextVitals from "eslint-config-next/core-web-vitals";
+
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    ".next/**",
+    "out/**",
+    "build/**",
+    "next-env.d.ts",
+  ]),
+]);
+
+export default eslintConfig;
+</file>
+
+<file path="index.html">
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="/images/2.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mèo Vạc · Hà Giang | TÂM BẢN Homestay</title>
+    <meta name="description" content="Khám phá văn hóa, con người, ẩm thực và cảnh quan hùng vĩ huyện Mèo Vạc - Hà Giang. Nghỉ tại TÂM BẢN Homestay giữa lòng đại ngàn H'Mông." />
+    <!-- Open Graph / chia sẻ MXH. Khi có domain chính thức, đổi /images/3.png thành URL đầy đủ vd https://tamban-homestay.netlify.app/images/3.png -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TÂM BẢN Homestay · Mèo Vạc, Hà Giang" />
+    <meta property="og:description" content="Homestay giữa lòng đại ngàn H'Mông — khám phá văn hóa, ẩm thực và cảnh quan Mèo Vạc, Hà Giang." />
+    <meta property="og:image" content="/images/3.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="jsconfig.json">
+{
+  "compilerOptions": {
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
+</file>
+
+<file path="netlify.toml">
+# Cấu hình deploy Netlify cho Tâm Bản Homestay
+[build]
+  command = "npm run build"   # Vite build ra thư mục dist
+  publish = "dist"            # Netlify lấy nội dung từ dist
+
+# SPA fallback: mọi đường dẫn trả về index.html (React Router xử lý phía client)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+</file>
+
+<file path="next.config.mjs">
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  /* config options here */
+};
+
+export default nextConfig;
+</file>
+
+<file path="package.json">
+{
+  "name": "tamban-homestay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@tiptap/extension-color": "^3.22.5",
+    "@tiptap/extension-highlight": "^3.22.5",
+    "@tiptap/extension-image": "^3.22.5",
+    "@tiptap/extension-link": "^3.22.5",
+    "@tiptap/extension-text-align": "^3.22.5",
+    "@tiptap/extension-text-style": "^3.22.5",
+    "@tiptap/extension-underline": "^3.22.5",
+    "@tiptap/react": "^3.22.5",
+    "@tiptap/starter-kit": "^3.22.5",
+    "firebase": "^12.12.1",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-router-dom": "^7.6.0",
+    "tiptap-extension-resize-image": "^1.4.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4",
+    "@vitejs/plugin-react": "^4",
+    "tailwindcss": "^4",
+    "vite": "^6"
+  },
+  "optionalDependencies": {
+    "@rollup/rollup-linux-x64-gnu": "*"
+  }
+}
+</file>
+
+<file path="postcss.config.mjs">
+// PostCSS không cần thiết khi dùng @tailwindcss/vite plugin.
+// File này giữ lại rỗng để tránh Vite tìm kiếm và lỗi.
+export default {};
+</file>
+
+<file path="public/_redirects">
+/*    /index.html   200
+</file>
+
+<file path="public/file.svg">
+<svg fill="none" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M14.5 13.5V5.41a1 1 0 0 0-.3-.7L9.8.29A1 1 0 0 0 9.08 0H1.5v13.5A2.5 2.5 0 0 0 4 16h8a2.5 2.5 0 0 0 2.5-2.5m-1.5 0v-7H8v-5H3v12a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1M9.5 5V2.12L12.38 5zM5.13 5h-.62v1.25h2.12V5zm-.62 3h7.12v1.25H4.5zm.62 3h-.62v1.25h7.12V11z" clip-rule="evenodd" fill="#666" fill-rule="evenodd"/></svg>
+</file>
+
+<file path="public/globe.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill-rule="evenodd" clip-rule="evenodd" d="M10.27 14.1a6.5 6.5 0 0 0 3.67-3.45q-1.24.21-2.7.34-.31 1.83-.97 3.1M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m.48-1.52a7 7 0 0 1-.96 0H7.5a4 4 0 0 1-.84-1.32q-.38-.89-.63-2.08a40 40 0 0 0 3.92 0q-.25 1.2-.63 2.08a4 4 0 0 1-.84 1.31zm2.94-4.76q1.66-.15 2.95-.43a7 7 0 0 0 0-2.58q-1.3-.27-2.95-.43a18 18 0 0 1 0 3.44m-1.27-3.54a17 17 0 0 1 0 3.64 39 39 0 0 1-4.3 0 17 17 0 0 1 0-3.64 39 39 0 0 1 4.3 0m1.1-1.17q1.45.13 2.69.34a6.5 6.5 0 0 0-3.67-3.44q.65 1.26.98 3.1M8.48 1.5l.01.02q.41.37.84 1.31.38.89.63 2.08a40 40 0 0 0-3.92 0q.25-1.2.63-2.08a4 4 0 0 1 .85-1.32 7 7 0 0 1 .96 0m-2.75.4a6.5 6.5 0 0 0-3.67 3.44 29 29 0 0 1 2.7-.34q.31-1.83.97-3.1M4.58 6.28q-1.66.16-2.95.43a7 7 0 0 0 0 2.58q1.3.27 2.95.43a18 18 0 0 1 0-3.44m.17 4.71q-1.45-.12-2.69-.34a6.5 6.5 0 0 0 3.67 3.44q-.65-1.27-.98-3.1" fill="#666"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
+</file>
+
+<file path="public/next.svg">
+<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 394 80"><path fill="#000" d="M262 0h68.5v12.7h-27.2v66.6h-13.6V12.7H262V0ZM149 0v12.7H94v20.4h44.3v12.6H94v21h55v12.6H80.5V0h68.7zm34.3 0h-17.8l63.8 79.4h17.9l-32-39.7 32-39.6h-17.9l-23 28.6-23-28.6zm18.3 56.7-9-11-27.1 33.7h17.8l18.3-22.7z"/><path fill="#000" d="M81 79.3 17 0H0v79.3h13.6V17l50.2 62.3H81Zm252.6-.4c-1 0-1.8-.4-2.5-1s-1.1-1.6-1.1-2.6.3-1.8 1-2.5 1.6-1 2.6-1 1.8.3 2.5 1a3.4 3.4 0 0 1 .6 4.3 3.7 3.7 0 0 1-3 1.8zm23.2-33.5h6v23.3c0 2.1-.4 4-1.3 5.5a9.1 9.1 0 0 1-3.8 3.5c-1.6.8-3.5 1.3-5.7 1.3-2 0-3.7-.4-5.3-1s-2.8-1.8-3.7-3.2c-.9-1.3-1.4-3-1.4-5h6c.1.8.3 1.6.7 2.2s1 1.2 1.6 1.5c.7.4 1.5.5 2.4.5 1 0 1.8-.2 2.4-.6a4 4 0 0 0 1.6-1.8c.3-.8.5-1.8.5-3V45.5zm30.9 9.1a4.4 4.4 0 0 0-2-3.3 7.5 7.5 0 0 0-4.3-1.1c-1.3 0-2.4.2-3.3.5-.9.4-1.6 1-2 1.6a3.5 3.5 0 0 0-.3 4c.3.5.7.9 1.3 1.2l1.8 1 2 .5 3.2.8c1.3.3 2.5.7 3.7 1.2a13 13 0 0 1 3.2 1.8 8.1 8.1 0 0 1 3 6.5c0 2-.5 3.7-1.5 5.1a10 10 0 0 1-4.4 3.5c-1.8.8-4.1 1.2-6.8 1.2-2.6 0-4.9-.4-6.8-1.2-2-.8-3.4-2-4.5-3.5a10 10 0 0 1-1.7-5.6h6a5 5 0 0 0 3.5 4.6c1 .4 2.2.6 3.4.6 1.3 0 2.5-.2 3.5-.6 1-.4 1.8-1 2.4-1.7a4 4 0 0 0 .8-2.4c0-.9-.2-1.6-.7-2.2a11 11 0 0 0-2.1-1.4l-3.2-1-3.8-1c-2.8-.7-5-1.7-6.6-3.2a7.2 7.2 0 0 1-2.4-5.7 8 8 0 0 1 1.7-5 10 10 0 0 1 4.3-3.5c2-.8 4-1.2 6.4-1.2 2.3 0 4.4.4 6.2 1.2 1.8.8 3.2 2 4.3 3.4 1 1.4 1.5 3 1.5 5h-5.8z"/></svg>
+</file>
+
+<file path="public/vercel.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1155 1000"><path d="m577.3 0 577.4 1000H0z" fill="#fff"/></svg>
+</file>
+
+<file path="public/window.svg">
+<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.5 2.5h13v10a1 1 0 0 1-1 1h-11a1 1 0 0 1-1-1zM0 1h16v11.5a2.5 2.5 0 0 1-2.5 2.5h-11A2.5 2.5 0 0 1 0 12.5zm3.75 4.5a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5M7 4.75a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0m1.75.75a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5" fill="#666"/></svg>
+</file>
+
+<file path="README.md">
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+## Getting Started
+
+First, run the development server:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+
+## Learn More
+
+To learn more about Next.js, take a look at the following resources:
+
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+
+## Deploy on Vercel
+
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+</file>
+
+<file path="SETUP-FIREBASE.md">
+# BUỔI 5 — Thiết lập Firebase & Deploy (Tâm Bản Homestay)
+
+> Bản copy này đã **gỡ sạch cấu hình Firebase cũ**. File `src/lib/firebase.js`
+> đang để TRỐNG (toàn chữ `DÁN_..._CỦA_BẠN`). Mỗi thầy/cô tự tạo một dự án
+> Firebase **riêng**, đặt luật bảo mật, rồi dán cấu hình vào — làm theo các bước dưới.
+>
+> ⚠️ **Lưu ý quan trọng — project này KHÁC demo của giáo án.**
+> App Tâm Bản đầy đủ **không dùng `destinations`** và **không có `data.js`**.
+> Nội dung các trang (Văn hóa, Ẩm thực, Địa hình, Bungalow) viết cứng trong từng
+> file trang. Dữ liệu sống qua Firebase chỉ gồm **2 kho (collection)**:
+>
+> - `bookings` — khách đặt phòng (Trang chủ GHI vào, khu Admin ĐỌC ra)
+> - `posts` — bài Nhật Ký / blog (Admin TẠO/SỬA/XÓA, trang công khai ĐỌC)
+>
+> Hai kho này **tự sinh ra** khi có dữ liệu đầu tiên — không cần tạo tay.
+
+---
+
+## BƯỚC 0 — Cài thư viện & chạy thử (1 lần đầu)
+
+Mở terminal ngay trong thư mục `TamBan-Homestay` này:
+
+```bash
+npm install        # tải toàn bộ thư viện (có sẵn cả "firebase")
+npm run dev        # chạy web ở máy: mở http://localhost:5173
+```
+
+Web mở được nhưng **chưa có dữ liệu sống** — đặt phòng / nhật ký sẽ báo lỗi đỏ ở
+Console vì `firebase.js` còn trống. Bình thường, sửa ở Bước 1–5.
+
+> Đăng nhập khu Admin (demo): `admin` / `123456`. Đây chỉ là mật khẩu tập luyện
+> (lưu ở localStorage, KHÔNG phải Firebase Auth) — đổi sau khi dùng thật.
+
+---
+
+## BƯỚC 1 — Tạo dự án Firebase
+
+1. Vào **https://console.firebase.google.com** → đăng nhập bằng Gmail.
+2. Bấm **Add project / Tạo dự án** → đặt tên (vd `tamban-cua-toi`) → Continue.
+3. Google Analytics: **tắt** cho đơn giản (đỡ phải tạo thêm tài khoản Analytics,
+   không cần cho dự án này) → **Create project** → đợi ~30 giây.
+
+## BƯỚC 2 — Bật Firestore Database (chế độ production)
+
+1. Menu trái → **Build → Firestore Database** → **Create database**.
+2. Chọn **Start in production mode** (khóa mặc định — an toàn, ta tự mở đúng quyền ở Bước 3).
+3. Location gần: `asia-southeast1` → **Enable**.
+
+> *Vì sao production, không phải test mode:* test mode mở cho ai cũng đọc/ghi mọi
+> kho trong 30 ngày — tiện nhưng là lỗ hổng. Production khóa hết rồi ta mở đúng
+> chỗ cần, đây mới là cách làm thật.
+
+## BƯỚC 3 — Đặt Security Rules cho `bookings` và `posts`
+
+Console → **Firestore → tab Rules** → xóa nội dung cũ, dán khối dưới → **Publish**.
+
+```
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // Đặt phòng: khách GỬI được (create) và Admin ĐỌC được (read);
+    // chặn sửa/xóa từ bên ngoài
+    match /bookings/{id} {
+      allow read, create: if true;
+      allow update, delete: if false;
+    }
+
+    // Nhật ký: ai cũng ĐỌC; cho GHI ở mức lớp học
+    match /posts/{id} {
+      allow read: if true;
+      allow write: if true;   // An toàn THẬT: if request.auth != null (Firebase Auth)
+    }
+
+    // Mọi kho khác: chặn hết
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
+```
+
+> App này đăng nhập Admin bằng localStorage (không phải Firebase Auth), nên luật
+> chưa thể phân biệt admin thật. Vì vậy `posts` tạm để `allow write: if true`.
+> Bước nâng cao (Buổi 6 / sau): bật **Firebase Auth** rồi đổi thành
+> `allow write: if request.auth != null` để chỉ người đăng nhập mới ghi được.
+
+> Muốn nhanh: dùng **vibe code** — đưa `npx repomix` cho Gemini kèm Prompt D4
+> ("viết Security Rules production: bookings cho gửi+đọc, posts cho đọc+ghi mức
+> lớp học, còn lại chặn hết"), Gemini trả về full nội dung để dán vào tab Rules.
+
+## BƯỚC 4 — Lấy cấu hình (config) của dự án
+
+1. Bấm **⚙️ Project settings** (góc trên menu trái).
+2. Kéo xuống **Your apps** → bấm icon **Web `</>`**.
+3. Đặt nickname (vd `web`) → **Register app** (KHÔNG cần bật Hosting).
+4. Firebase hiện khối `const firebaseConfig = { ... }` — **đây là thứ cần copy.**
+
+## BƯỚC 5 — Dán config vào `src/lib/firebase.js`
+
+Mở `src/lib/firebase.js`, thay nguyên khối `firebaseConfig` đang trống bằng khối
+Firebase vừa cấp:
+
+```js
+const firebaseConfig = {
+  apiKey: "AIzaSy....(của bạn)",
+  authDomain: "tamban-cua-toi.firebaseapp.com",
+  projectId: "tamban-cua-toi",
+  storageBucket: "tamban-cua-toi.firebasestorage.app",
+  messagingSenderId: "1234567890",
+  appId: "1:1234567890:web:abcdef...."
+};
+```
+
+Lưu lại. Nếu `npm run dev` còn chạy, web tự nạp lại.
+
+## BƯỚC 6 — Kiểm tra dữ liệu sống
+
+1. Ra **Trang chủ** → điền form **đặt phòng** → gửi.
+2. Console → Firestore → kho **`bookings`** tự xuất hiện với bản ghi vừa gửi.
+   Vào khu Admin (`admin`/`123456`) sẽ thấy đơn đó.
+3. **Admin → Nhật Ký → Tạo mới** → đăng 1 bài → kho **`posts`** xuất hiện,
+   trang Nhật Ký công khai hiển thị bài.
+
+Thấy được = Firebase đã kết nối thành công. 🎉
+
+> Nếu đặt phòng / đăng bài báo lỗi **"Missing or insufficient permissions"** →
+> Rules ở Bước 3 chưa Publish hoặc sai tên kho. Kiểm tra lại tab Rules.
+
+---
+
+## BƯỚC 7 — Build & Deploy lên Netlify
+
+```bash
+npm run build      # đóng gói → tạo thư mục dist/
+```
+
+### Cách nhanh — Netlify Drop
+1. Vào **https://app.netlify.com/drop**
+2. Kéo nguyên thư mục **`dist/`** thả vào → nhận URL `....netlify.app`.
+3. Mở URL trên điện thoại để thấy web thật.
+
+### Cách chuyên nghiệp — GitHub (CI/CD): **GitHub trước, Netlify sau**
+1. Kiểm tra `.gitignore` đã loại `node_modules/`, `dist/`, `repomix-output.*`, `.env*`.
+2. Đưa code lên GitHub (GitHub Desktop hoặc lệnh):
+   ```bash
+   git init
+   git branch -M main
+   git add .
+   git status                 # KHÔNG được thấy node_modules / dist
+   git commit -m "Ban dau"
+   git remote add origin https://github.com/<tai-khoan>/<ten-repo>.git
+   git push -u origin main
+   ```
+3. Netlify → **Add new site → Import from GitHub** → chọn repo. Build command
+   `npm run build`, publish `dist` (đã có sẵn trong `netlify.toml`) → Deploy.
+4. Từ nay mỗi lần `git push`, Netlify **tự build & cập nhật**. Kèm HTTPS + CDN miễn phí.
+
+> Lỗi 404 khi F5 ở trang con đã được xử lý sẵn bằng `public/_redirects` +
+> `netlify.toml`. Không cần làm gì thêm.
+
+---
+
+## Tóm tắt 1 dòng
+`npm install` → tạo Firebase + Firestore (**production mode**) → **đặt Rules cho
+`bookings`/`posts`** → dán config vào `firebase.js` → thử đặt phòng/đăng bài →
+`npm run build` → deploy Netlify (Drop hoặc GitHub CI/CD).
+</file>
+
+<file path="src/App.jsx">
+import React from 'react';
+import { Routes, Route } from 'react-router-dom';
+
+// ── Trang công khai ───────────────────────────────────────
+import HomePage       from './pages/HomePage';
+import VanHoaPage     from './pages/VanHoaPage';
+import AmThucPage     from './pages/AmThucPage';
+import DiaHinhPage    from './pages/DiaHinhPage';
+import NhatKyPage     from './pages/NhatKyPage';
+import PostDetailPage from './pages/PostDetailPage';
+import BungalowPage   from './pages/BungalowPage';
+
+// ── Trang quản trị ────────────────────────────────────────
+import AdminLayout      from './pages/admin/AdminLayout';
+import AdminDashboard   from './pages/admin/AdminDashboard';
+import AdminLoginPage   from './pages/admin/AdminLoginPage';
+import NhatKyListPage   from './pages/admin/NhatKyListPage';
+import TaoMoiPage       from './pages/admin/TaoMoiPage';
+import SuaPage          from './pages/admin/SuaPage';
+import DatPhongPage     from './pages/admin/DatPhongPage';
+
+export default function App() {
+  return (
+    <Routes>
+      {/* Public */}
+      <Route path="/"                    element={<HomePage />} />
+      <Route path="/van-hoa"             element={<VanHoaPage />} />
+      <Route path="/am-thuc"             element={<AmThucPage />} />
+      <Route path="/dia-hinh-thoi-tiet"  element={<DiaHinhPage />} />
+      <Route path="/nhat-ky"             element={<NhatKyPage />} />
+      <Route path="/nhat-ky/:id"         element={<PostDetailPage />} />
+      <Route path="/bungalow"            element={<BungalowPage />} />
+
+      {/* Admin — bọc trong AdminLayout (có sidebar + auth guard) */}
+      <Route path="/admin" element={<AdminLayout />}>
+        <Route index                       element={<AdminDashboard />} />
+        <Route path="login"                element={<AdminLoginPage />} />
+        <Route path="nhat-ky"              element={<NhatKyListPage />} />
+        <Route path="nhat-ky/tao-moi"     element={<TaoMoiPage />} />
+        <Route path="nhat-ky/sua/:id"     element={<SuaPage />} />
+        <Route path="dat-phong"             element={<DatPhongPage />} />
+      </Route>
+    </Routes>
+  );
+}
+</file>
+
+<file path="src/app/layout.jsx">
+import './globals.css'
+
+export const metadata = {
+  title: 'Mèo Vạc · Hà Giang | TÂM BẢN Homestay',
+  description: 'Khám phá văn hóa, con người, ẩm thực và cảnh quan hùng vĩ huyện Mèo Vạc - Hà Giang. Nghỉ tại TÂM BẢN Homestay giữa lòng đại ngàn H\'Mông.',
+}
+
+export default function RootLayout({ children }) {
+  return (
+    <html lang="vi">
+      <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+      </head>
+      <body className="font-sans bg-off-white text-ink">
+        {children}
+      </body>
+    </html>
+  )
+}
+</file>
+
+<file path="src/components/Navbar.jsx">
+import React, { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
+
+const navLinks = [
+  { href: '/', label: 'Trang chủ' },
+  { href: '/van-hoa', label: 'Văn hóa & Con người' },
+  { href: '/am-thuc', label: 'Ẩm thực' },
+  { href: '/dia-hinh-thoi-tiet', label: 'Địa hình & Thời tiết' },
+  { href: '/nhat-ky', label: 'Nhật ký TÂM BẢN' },
+  { href: '/bungalow', label: 'Phòng & Giường' },
+];
+
+export default function Navbar() {
+  const { pathname } = useLocation();
+  const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  // Cuộn quá 30px → navbar chuyển sang nền đặc (trước đó trong suốt, đè lên hero)
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
+
+  useEffect(() => { setMobileOpen(false); }, [pathname]);
+
+  // "solid" = navbar nền đặc (đã cuộn HOẶC menu mobile đang mở)
+  const solid = scrolled || mobileOpen;
+
+  return (
+    <>
+      <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        solid ? 'bg-white/95 backdrop-blur-md shadow-md py-3' : 'bg-transparent py-5'
+      }`}>
+        <div className="max-w-7xl mx-auto px-5 md:px-8 flex justify-between items-center">
+          {/* Logo — lọc trắng khi trong suốt trên hero, xanh khi nền trắng */}
+          <a href="/" className="shrink-0">
+            <img
+              src="/images/1.png"
+              alt="TÂM BẢN Homestay"
+              className="w-auto transition-all duration-300"
+              style={{
+                height: solid ? '2.75rem' : '3.25rem',
+                filter: solid ? 'none' : 'brightness(0) invert(1)',
+              }}
+            />
+          </a>
+
+          {/* Desktop nav */}
+          <div className="hidden lg:flex items-center space-x-6 text-[12.5px] tracking-wide">
+            {navLinks.map(({ href, label }) => {
+              const active = pathname === href;
+              const base = solid
+                ? (active ? 'text-forest-green font-semibold' : 'text-gray-600 hover:text-forest-green')
+                : (active ? 'text-white font-semibold' : 'text-white/80 hover:text-white');
+              return (
+                <a key={href} href={href} className={`relative pb-0.5 whitespace-nowrap transition-colors duration-200 group ${base}`}>
+                  {label}
+                  <span className={`absolute bottom-0 left-0 h-[1.5px] transition-all duration-300 ${
+                    solid ? 'bg-forest-green' : 'bg-white'
+                  } ${active ? 'w-full' : 'w-0 group-hover:w-full'}`} />
+                </a>
+              );
+            })}
+          </div>
+
+          {/* Right: CTA + Hamburger */}
+          <div className="flex items-center gap-2 md:gap-3">
+            <a href="/#dat-phong"
+              className={`px-4 md:px-6 py-2 md:py-2.5 text-[10px] md:text-[11px] tracking-widest font-bold rounded-full active:scale-95 transition-all duration-200 shrink-0 ${
+                solid
+                  ? 'bg-forest-green text-white hover:bg-forest-dark shadow-sm'
+                  : 'bg-white/15 text-white border border-white/60 backdrop-blur-sm hover:bg-white/25'
+              }`}
+            >
+              ĐẶT PHÒNG
+            </a>
+            <button
+              onClick={() => setMobileOpen(v => !v)}
+              className={`lg:hidden p-2 rounded-lg transition-colors ${solid ? 'text-gray-700 hover:text-forest-green' : 'text-white'}`}
+              aria-label={mobileOpen ? 'Đóng menu' : 'Mở menu'}
+            >
+              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileOpen
+                  ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />}
+              </svg>
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile drawer */}
+        <div className={`lg:hidden overflow-hidden transition-all duration-300 ease-in-out ${mobileOpen ? 'max-h-96 opacity-100 mt-2' : 'max-h-0 opacity-0'}`}>
+          <div className="px-4 py-3 space-y-1 bg-white">
+            {navLinks.map(({ href, label }) => (
+              <a key={href} href={href}
+                className={`flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-150 ${
+                  pathname === href
+                    ? 'bg-forest-green/5 text-forest-green border-l-2 border-forest-green'
+                    : 'text-gray-600 hover:bg-gray-50 hover:text-forest-green hover:pl-5'
+                }`}
+              >
+                {label}
+              </a>
+            ))}
+          </div>
+        </div>
+      </nav>
+    </>
+  );
+}
+</file>
+
+<file path="src/components/NavbarWrapper.jsx">
+"use client";
+import dynamic from 'next/dynamic';
+
+// Dùng ssr: false để tránh hydration mismatch với Navbar (useState vs usePathname)
+// Wrapper này là Client Component nên được phép dùng ssr: false
+const Navbar = dynamic(() => import('./Navbar'), { ssr: false });
+
+export default function NavbarWrapper() {
+  return <Navbar />;
+}
+</file>
+
+<file path="src/components/Reveal.jsx">
+import React, { useRef, useEffect, useState } from 'react';
+
+// Bọc nội dung để hiện dần (fade-up) khi cuộn tới — tạo cảm giác "sống động".
+// delay: trễ animation (ms) để các phần tử hiện so le. as: đổi thẻ bọc (mặc định div).
+export default function Reveal({ children, className = '', delay = 0, as: Tag = 'div' }) {
+  const ref = useRef(null);
+  const [seen, setSeen] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) { setSeen(true); io.disconnect(); }
+      },
+      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
+    );
+    io.observe(el);
+    return () => io.disconnect();
+  }, []);
+
+  return (
+    <Tag ref={ref} className={`reveal ${seen ? 'is-visible' : ''} ${className}`} style={{ animationDelay: `${delay}ms` }}>
+      {children}
+    </Tag>
+  );
+}
+</file>
+
+<file path="src/components/TiptapEditor.jsx">
+import React, { useState, useRef, useEffect } from 'react';
+import { useEditor, EditorContent } from '@tiptap/react';
+import StarterKit from '@tiptap/starter-kit';
+import ImageResize from 'tiptap-extension-resize-image';
+import Underline from '@tiptap/extension-underline';
+import TextAlign from '@tiptap/extension-text-align';
+import Link from '@tiptap/extension-link';
+import { Color } from '@tiptap/extension-color';
+import { TextStyle } from '@tiptap/extension-text-style';
+import Highlight from '@tiptap/extension-highlight';
+
+// ── Inline URL dialog (thay thế window.prompt) ─────────────────────────────
+function UrlDialog({ title, placeholder, defaultValue, onConfirm, onCancel }) {
+  const [val, setVal] = useState(defaultValue || '');
+  const inputRef = useRef(null);
+
+  useEffect(() => { inputRef.current?.focus(); inputRef.current?.select(); }, []);
+
+  const submit = () => { if (val.trim()) onConfirm(val.trim()); };
+
+  return (
+    <div className="fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/30" onClick={onCancel} />
+      <div className="relative bg-white rounded-2xl shadow-2xl w-full max-w-sm p-6">
+        <p className="text-sm font-bold text-gray-700 mb-3">{title}</p>
+        <input
+          ref={inputRef}
+          type="url"
+          value={val}
+          onChange={e => setVal(e.target.value)}
+          onKeyDown={e => { if (e.key === 'Enter') submit(); if (e.key === 'Escape') onCancel(); }}
+          placeholder={placeholder}
+          className="w-full px-3 py-2.5 border border-gray-300 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/30 focus:border-forest-green"
+        />
+        <div className="flex gap-2 mt-4">
+          <button onClick={onCancel}
+            className="flex-1 px-4 py-2 border border-gray-200 rounded-xl text-sm text-gray-500 hover:bg-gray-50 transition-colors">
+            Hủy
+          </button>
+          <button onClick={submit} disabled={!val.trim()}
+            className="flex-1 px-4 py-2 bg-forest-green text-white rounded-xl text-sm font-bold hover:bg-[#1E5225] disabled:opacity-50 transition-colors">
+            Xác nhận
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+// ── Toolbar button helper ────────────────────────────────────────────────────
+function Btn({ onClick, active, disabled, title, children, className = '' }) {
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled}
+      title={title}
+      className={`px-2.5 py-1.5 rounded text-sm transition-colors disabled:opacity-30 ${
+        active ? 'bg-forest-green text-white' : 'text-gray-700 hover:bg-gray-200'
+      } ${className}`}>
+      {children}
+    </button>
+  );
+}
+
+function Sep() { return <div className="w-px h-5 bg-gray-300 mx-0.5 self-center shrink-0" />; }
+
+// ── Toolbar ──────────────────────────────────────────────────────────────────
+function MenuBar({ editor, wordCount }) {
+  const [dialog, setDialog] = useState(null); // { type: 'image' | 'link', defaultValue? }
+
+  if (!editor) return null;
+
+  const openImageDialog = () => setDialog({ type: 'image' });
+  const openLinkDialog  = () => setDialog({ type: 'link', defaultValue: editor.getAttributes('link').href || '' });
+
+  const handleImageConfirm = (url) => {
+    editor.chain().focus().setImage({ src: url }).run();
+    setDialog(null);
+  };
+
+  const handleLinkConfirm = (url) => {
+    editor.chain().focus().extendMarkRange('link').setLink({ href: url }).run();
+    setDialog(null);
+  };
+
+  const handleLinkCancel = () => setDialog(null);
+
+  const handleUnsetLink = () => {
+    editor.chain().focus().extendMarkRange('link').unsetLink().run();
+    setDialog(null);
+  };
+
+  return (
+    <>
+      <div className="flex flex-wrap gap-1 p-2.5 border-b border-gray-200 bg-gray-50 rounded-t-xl items-center">
+        {/* Undo / Redo */}
+        <Btn onClick={() => editor.chain().focus().undo().run()} disabled={!editor.can().undo()} title="Hoàn tác">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6"/></svg>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().redo().run()} disabled={!editor.can().redo()} title="Làm lại">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 10H11a8 8 0 00-8 8v2m18-10l-6 6m6-6l-6-6"/></svg>
+        </Btn>
+
+        <Sep />
+
+        {/* Format */}
+        <Btn onClick={() => editor.chain().focus().toggleBold().run()} active={editor.isActive('bold')} title="In đậm">
+          <strong>B</strong>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().toggleItalic().run()} active={editor.isActive('italic')} title="In nghiêng">
+          <em>I</em>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().toggleUnderline().run()} active={editor.isActive('underline')} title="Gạch chân">
+          <span className="underline">U</span>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().toggleStrike().run()} active={editor.isActive('strike')} title="Gạch ngang">
+          <span className="line-through">S</span>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().toggleHighlight().run()} active={editor.isActive('highlight')} title="Dạ quang"
+          className={editor.isActive('highlight') ? '!bg-yellow-300 !text-black' : ''}>
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M11.489 2.04a1.5 1.5 0 012.06.501l4 7a1.5 1.5 0 01-.548 2.052l-2.248 1.285.766 3.065a.75.75 0 01-.98.905l-3.5-1.166a.75.75 0 01-.47-.574l-.343-2.062-1.97 1.127a1.5 1.5 0 01-2.053-.548l-2-3.5a1.5 1.5 0 01.548-2.052l7.738-4.034z"/></svg>
+        </Btn>
+        <input type="color"
+          onInput={e => editor.chain().focus().setColor(e.target.value).run()}
+          value={editor.getAttributes('textStyle').color || '#2B6830'}
+          title="Màu chữ"
+          className="w-7 h-7 p-0.5 border border-gray-300 rounded cursor-pointer"
+        />
+
+        <Sep />
+
+        {/* Align */}
+        <Btn onClick={() => editor.chain().focus().setTextAlign('left').run()} active={editor.isActive({ textAlign: 'left' })} title="Căn trái">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8M4 18h12"/></svg>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().setTextAlign('center').run()} active={editor.isActive({ textAlign: 'center' })} title="Căn giữa">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M7 12h10M6 18h12"/></svg>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().setTextAlign('right').run()} active={editor.isActive({ textAlign: 'right' })} title="Căn phải">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M12 12h8M8 18h12"/></svg>
+        </Btn>
+
+        <Sep />
+
+        {/* Headings & blocks */}
+        <Btn onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()} active={editor.isActive('heading', { level: 2 })}>H2</Btn>
+        <Btn onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()} active={editor.isActive('heading', { level: 3 })}>H3</Btn>
+        <Btn onClick={() => editor.chain().focus().toggleBulletList().run()} active={editor.isActive('bulletList')} title="Danh sách gạch đầu">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 10h16M4 14h16M4 18h16"/></svg>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().toggleOrderedList().run()} active={editor.isActive('orderedList')} title="Danh sách số">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 8h10M7 12h10M7 16h10M3 8h.01M3 12h.01M3 16h.01"/></svg>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().toggleBlockquote().run()} active={editor.isActive('blockquote')} title="Trích dẫn">
+          <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 13V5a2 2 0 00-2-2H4a2 2 0 00-2 2v8a2 2 0 002 2h3l3 3 3-3h3a2 2 0 002-2zM5 7a1 1 0 011-1h8a1 1 0 110 2H6a1 1 0 01-1-1zm1 3a1 1 0 100 2h3a1 1 0 100-2H6z" clipRule="evenodd"/></svg>
+        </Btn>
+        <Btn onClick={() => editor.chain().focus().setHorizontalRule().run()} title="Đường kẻ ngang">—</Btn>
+
+        <Sep />
+
+        {/* Link */}
+        {editor.isActive('link') ? (
+          <div className="flex items-center gap-0.5">
+            <Btn active onClick={openLinkDialog} title="Sửa link">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+            </Btn>
+            <button type="button" onClick={handleUnsetLink} title="Xóa link"
+              className="px-2 py-1.5 rounded text-red-500 hover:bg-red-50 transition-colors text-xs">✕</button>
+          </div>
+        ) : (
+          <Btn onClick={openLinkDialog} title="Chèn link">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/></svg>
+          </Btn>
+        )}
+
+        {/* Image */}
+        <button type="button" onClick={openImageDialog}
+          className="flex items-center gap-1.5 px-3 py-1.5 rounded bg-forest-medium text-white text-sm font-bold hover:bg-[#1E5225] transition-colors">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+          Ảnh
+        </button>
+
+        {/* Clear format */}
+        <button type="button"
+          onClick={() => editor.chain().focus().unsetAllMarks().clearNodes().run()}
+          title="Xóa toàn bộ định dạng"
+          className="ml-auto px-2.5 py-1.5 rounded text-gray-400 hover:text-red-500 hover:bg-red-50 transition-colors text-sm">
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/></svg>
+        </button>
+
+        {/* Word count */}
+        <span className="text-xs text-gray-400 px-1 whitespace-nowrap">{wordCount} từ</span>
+      </div>
+
+      {/* Image dialog */}
+      {dialog?.type === 'image' && (
+        <UrlDialog
+          title="Chèn ảnh từ URL"
+          placeholder="https://images.unsplash.com/..."
+          onConfirm={handleImageConfirm}
+          onCancel={() => setDialog(null)}
+        />
+      )}
+
+      {/* Link dialog */}
+      {dialog?.type === 'link' && (
+        <UrlDialog
+          title="Chèn hoặc chỉnh sửa liên kết"
+          placeholder="https://example.com"
+          defaultValue={dialog.defaultValue}
+          onConfirm={handleLinkConfirm}
+          onCancel={() => setDialog(null)}
+        />
+      )}
+    </>
+  );
+}
+
+// ── Main editor ──────────────────────────────────────────────────────────────
+export default function TiptapEditor({ content, onChange }) {
+  const [wordCount, setWordCount] = useState(0);
+
+  const editor = useEditor({
+    extensions: [
+      StarterKit,
+      ImageResize.configure({
+        inline: true,
+        HTMLAttributes: { class: 'rounded-lg shadow-sm' },
+      }),
+      Underline,
+      TextAlign.configure({ types: ['heading', 'paragraph'] }),
+      Link.configure({
+        openOnClick: false,
+        HTMLAttributes: { class: 'text-forest-medium underline cursor-pointer' },
+      }),
+      TextStyle,
+      Color,
+      Highlight.configure({ multicolor: true }),
+    ],
+    content,
+    immediatelyRender: false,
+    onUpdate: ({ editor }) => {
+      const html = editor.getHTML();
+      onChange(html);
+      const text = editor.state.doc.textContent;
+      setWordCount(text.trim() ? text.trim().split(/\s+/).length : 0);
+    },
+    editorProps: {
+      attributes: {
+        class: 'prose prose-indigo max-w-none focus:outline-none min-h-[400px] px-8 py-6 [&_img]:!inline-block [&_img]:!m-0',
+      },
+    },
+  });
+
+  return (
+    <div className="border border-gray-200 rounded-xl overflow-hidden shadow-sm">
+      <MenuBar editor={editor} wordCount={wordCount} />
+      <div className="bg-white">
+        <EditorContent editor={editor} />
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/lib/firebase.js">
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+
+// =============================================================
+//  BUỔI 5 — DÁN CẤU HÌNH FIREBASE CỦA RIÊNG BẠN VÀO ĐÂY
+// -------------------------------------------------------------
+//  Đây là phần TRỐNG. Mỗi thầy/cô sẽ tự tạo một dự án Firebase
+//  riêng (xem file SETUP-FIREBASE.md), rồi COPY khối "firebaseConfig"
+//  mà Firebase cấp cho mình và DÁN ĐÈ vào khối bên dưới.
+//
+//  Lấy ở đâu: Firebase Console -> ⚙️ Project settings -> mục
+//  "Your apps" -> chọn app Web (</>) -> copy đoạn const firebaseConfig.
+// =============================================================
+const firebaseConfig = {
+  apiKey: "DÁN_API_KEY_CỦA_BẠN",
+  authDomain: "DÁN_AUTH_DOMAIN_CỦA_BẠN",
+  projectId: "DÁN_PROJECT_ID_CỦA_BẠN",
+  storageBucket: "DÁN_STORAGE_BUCKET_CỦA_BẠN",
+  messagingSenderId: "DÁN_SENDER_ID_CỦA_BẠN",
+  appId: "DÁN_APP_ID_CỦA_BẠN"
+};
+
+// Khởi tạo Firebase
+const app = initializeApp(firebaseConfig);
+
+// Khởi tạo và xuất Database (BẮT BUỘC PHẢI CÓ DÒNG NÀY)
+export const db = getFirestore(app);
+</file>
+
+<file path="src/main.jsx">
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
+import './styles/globals.css';
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+  <React.StrictMode>
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>
+  </React.StrictMode>
+);
+</file>
+
+<file path="src/pages/admin/AdminDashboard.jsx">
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+function getGreeting() {
+  const h = new Date().getHours();
+  if (h < 12) return 'buổi sáng';
+  if (h < 18) return 'buổi chiều';
+  return 'buổi tối';
+}
+
+const QUICK_LINKS = [
+  {
+    to: '/admin/nhat-ky/tao-moi',
+    label: 'Viết bài mới',
+    desc: 'Đăng mẩu chuyện lên Nhật ký TÂM BẢN',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+      </svg>
+    ),
+    color: 'bg-forest-light text-forest-green',
+    adminOnly: true,
+  },
+  {
+    to: '/admin/nhat-ky',
+    label: 'Quản lý Nhật ký',
+    desc: 'Xem, sửa và xóa bài viết đã đăng',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+      </svg>
+    ),
+    color: 'bg-blue-50 text-blue-700',
+    adminOnly: true,
+  },
+  {
+    to: '/',
+    label: 'Xem trang chủ',
+    desc: 'Mở website du lịch TÂM BẢN',
+    icon: (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+      </svg>
+    ),
+    color: 'bg-amber-50 text-amber-700',
+    adminOnly: false,
+    external: true,
+  },
+];
+
+export default function AdminDashboard() {
+  const navigate = useNavigate();
+  const [role, setRole] = useState('');
+
+  useEffect(() => {
+    const savedRole = localStorage.getItem('userRole');
+    if (!savedRole) {
+      navigate('/admin/login');
+      return;
+    }
+    setRole(savedRole);
+  }, []);
+
+  const displayName = role === 'super_admin' ? 'Quản lý' : 'Lễ tân';
+
+  return (
+    <div>
+      {/* Welcome header */}
+      <header className="mb-10">
+        <h3 className="text-2xl md:text-3xl font-bold text-gray-900">
+          Chào {getGreeting()}, {displayName}! 👋
+        </h3>
+        <p className="text-gray-400 mt-1 text-sm">Đây là tổng quan hệ thống TÂM BẢN Homestay hôm nay.</p>
+      </header>
+
+      {/* Stats */}
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 mb-10">
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Lượt xem bài viết</p>
+              <h4 className="text-3xl font-bold text-gray-800">1,250</h4>
+              <p className="text-green-500 text-xs mt-2 font-medium">↑ 12% so với tuần trước</p>
+            </div>
+            <div className="w-10 h-10 bg-green-50 rounded-xl flex items-center justify-center shrink-0">
+              <svg className="w-5 h-5 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Phòng Hot nhất</p>
+              <h4 className="text-xl font-bold text-gray-800">Phòng Riêng</h4>
+              <p className="text-forest-green text-xs mt-2 italic font-medium">Chiếm 65% lượt hỏi</p>
+            </div>
+            <div className="w-10 h-10 bg-forest-light rounded-xl flex items-center justify-center shrink-0">
+              <svg className="w-5 h-5 text-forest-green" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+          <div className="flex items-start justify-between">
+            <div>
+              <p className="text-gray-400 text-xs font-bold uppercase tracking-wider mb-2">Nhật ký mới nhất</p>
+              <h4 className="text-base font-bold text-gray-800 italic truncate max-w-[150px]">"Mùa sương giăng..."</h4>
+              <p className="text-gray-400 text-xs mt-2">Đăng bởi Quản lý</p>
+            </div>
+            <div className="w-10 h-10 bg-amber-50 rounded-xl flex items-center justify-center shrink-0">
+              <svg className="w-5 h-5 text-amber-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 5H6a2 2 0 00-2 2v11a2 2 0 002 2h11a2 2 0 002-2v-5m-1.414-9.414a2 2 0 112.828 2.828L11.828 15H9v-2.828l8.586-8.586z"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Quick actions */}
+      <div>
+        <h4 className="text-xs font-bold text-gray-400 uppercase tracking-widest mb-4">Thao tác nhanh</h4>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {QUICK_LINKS
+            .filter(link => !link.adminOnly || role === 'super_admin')
+            .map(link => (
+              <button
+                key={link.to}
+                onClick={() => navigate(link.to)}
+                className="bg-white border border-gray-100 rounded-2xl p-5 text-left hover:shadow-md hover:border-gray-200 active:scale-[0.98] transition-all duration-200 flex items-start gap-4"
+              >
+                <div className={`w-11 h-11 rounded-xl flex items-center justify-center shrink-0 ${link.color}`}>
+                  {link.icon}
+                </div>
+                <div>
+                  <p className="font-bold text-gray-800 text-sm">{link.label}</p>
+                  <p className="text-gray-400 text-xs mt-0.5 leading-relaxed">{link.desc}</p>
+                </div>
+              </button>
+            ))
+          }
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/admin/AdminLayout.jsx">
+import React, { useEffect, useState } from 'react';
+import { useLocation, useNavigate, Outlet, NavLink } from 'react-router-dom';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+import { db } from '../../lib/firebase';
+
+const NAV_ITEMS = [
+  {
+    to: '/admin', end: true, label: 'Bảng điều khiển', adminOnly: false,
+    icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zm10 0a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"/></svg>,
+  },
+  {
+    to: '/admin/dat-phong', label: 'Đặt phòng', adminOnly: false, badge: true,
+    icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>,
+  },
+  {
+    to: '/admin/nhat-ky', label: 'Quản lý Nhật ký', adminOnly: true,
+    icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>,
+  },
+  {
+    to: '/admin/bungalow', label: 'Cấu hình Phòng', adminOnly: true,
+    icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>,
+  },
+  {
+    to: '/admin/nhan-su', label: 'Quản lý Nhân sự', adminOnly: true,
+    icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>,
+  },
+  {
+    to: '/admin/ho-tro', label: 'Lịch hỗ trợ khách', adminOnly: false,
+    icon: <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>,
+  },
+];
+
+export default function AdminLayout() {
+  const [role, setRole] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
+  const [newBookingCount, setNewBookingCount] = useState(0);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const savedRole = localStorage.getItem('userRole');
+    if (!savedRole && pathname !== '/admin/login') {
+      navigate('/admin/login');
+    } else {
+      setRole(savedRole);
+      setIsLoading(false);
+    }
+  }, [pathname]);
+
+  useEffect(() => { setMobileSidebarOpen(false); }, [pathname]);
+
+  // Poll for new bookings every 30s
+  useEffect(() => {
+    if (!role) return;
+    const fetchBadge = async () => {
+      try {
+        const q = query(collection(db, 'bookings'), where('status', '==', 'new'));
+        const snap = await getDocs(q);
+        setNewBookingCount(snap.size);
+      } catch (_) {}
+    };
+    fetchBadge();
+    const interval = setInterval(fetchBadge, 30000);
+    return () => clearInterval(interval);
+  }, [role]);
+
+  const handleLogout = () => {
+    localStorage.removeItem('userRole');
+    navigate('/admin/login');
+  };
+
+  if (pathname === '/admin/login') return <Outlet />;
+  if (isLoading) return <div className="min-h-screen bg-gray-50" />;
+
+  const roleBadge = role === 'super_admin'
+    ? { label: 'Super Admin', cls: 'bg-amber-100 text-amber-800' }
+    : { label: 'Nhan vien', cls: 'bg-blue-100 text-blue-800' };
+
+  const visibleNav = NAV_ITEMS.filter(item => !item.adminOnly || role === 'super_admin');
+
+  const SidebarContent = () => (
+    <aside className="w-64 bg-forest-green text-white flex flex-col h-full">
+      <div className="px-6 pt-8 pb-6 border-b border-white/10">
+        <h2 className="text-xl font-serif font-bold tracking-widest">TAM BAN</h2>
+        <span className="text-[10px] text-white/50 uppercase tracking-widest">Admin Panel</span>
+        <div className="mt-4 flex items-center gap-2">
+          <div className="w-7 h-7 rounded-full bg-white/20 flex items-center justify-center text-xs font-bold">
+            {role === 'super_admin' ? 'A' : 'S'}
+          </div>
+          <span className={`text-[10px] font-bold px-2 py-0.5 rounded-full ${roleBadge.cls}`}>
+            {roleBadge.label}
+          </span>
+        </div>
+      </div>
+
+      <nav className="flex-grow px-4 py-5 space-y-1 overflow-y-auto">
+        {visibleNav.map(item => (
+          <NavLink key={item.to} to={item.to} end={item.end}
+            className={({ isActive }) =>
+              `flex items-center gap-3 px-4 py-2.5 rounded-xl text-sm font-medium transition-all duration-150 ${
+                isActive ? 'bg-white text-forest-green shadow-sm' : 'text-white/70 hover:bg-white/10 hover:text-white'
+              }`
+            }>
+            {({ isActive }) => (
+              <>
+                <span className={isActive ? 'text-forest-green' : 'text-white/60'}>{item.icon}</span>
+                <span className="flex-grow">{item.label}</span>
+                {item.badge && newBookingCount > 0 && (
+                  <span className="bg-red-500 text-white text-[10px] font-bold px-1.5 py-0.5 rounded-full min-w-[18px] text-center leading-none">
+                    {newBookingCount}
+                  </span>
+                )}
+              </>
+            )}
+          </NavLink>
+        ))}
+      </nav>
+
+      <div className="px-6 py-5 border-t border-white/10">
+        <button onClick={handleLogout}
+          className="flex items-center gap-2 text-xs text-white/50 hover:text-white uppercase font-bold tracking-widest transition-colors">
+          <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 16l4-4m0 0l-4-4m4 4H7m6 4v1a3 3 0 01-3 3H6a3 3 0 01-3-3V7a3 3 0 013-3h4a3 3 0 013 3v1"/>
+          </svg>
+          Dang xuat
+        </button>
+      </div>
+    </aside>
+  );
+
+  return (
+    <div className="min-h-screen bg-gray-50 flex font-sans">
+      {/* Desktop sidebar */}
+      <div className="hidden md:flex sticky top-0 h-screen">
+        <SidebarContent />
+      </div>
+
+      {/* Mobile sidebar overlay */}
+      {mobileSidebarOpen && (
+        <div className="md:hidden fixed inset-0 z-50 flex">
+          <div className="fixed inset-0 bg-black/40" onClick={() => setMobileSidebarOpen(false)} />
+          <div className="relative w-64 h-full">
+            <SidebarContent />
+          </div>
+        </div>
+      )}
+
+      <div className="flex-grow flex flex-col min-w-0">
+        {/* Mobile top bar */}
+        <div className="md:hidden flex items-center justify-between px-4 py-3 bg-white border-b border-gray-200 sticky top-0 z-40">
+          <button onClick={() => setMobileSidebarOpen(true)}
+            className="p-2 text-gray-600 hover:text-forest-green rounded-lg hover:bg-gray-50 transition-colors relative">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            {newBookingCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 bg-red-500 rounded-full text-white text-[9px] flex items-center justify-center font-bold">
+                {newBookingCount}
+              </span>
+            )}
+          </button>
+          <span className="font-serif font-bold text-forest-green tracking-widest text-lg">TAM BAN</span>
+          <span className={`text-[10px] font-bold px-2 py-1 rounded-full ${roleBadge.cls}`}>{roleBadge.label}</span>
+        </div>
+
+        <main className="flex-grow p-6 md:p-10 overflow-y-auto">
+          <Outlet />
+        </main>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/admin/AdminLoginPage.jsx">
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+
+export default function AdminLoginPage() {
+  const navigate = useNavigate();
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [showPw, setShowPw] = useState(false);
+  const [error, setError] = useState('');
+  const [isLoading, setIsLoading] = useState(false);
+
+  const handleLogin = async (e) => {
+    e.preventDefault();
+    setError('');
+    if (!username.trim() || !password.trim()) {
+      setError('Vui lòng điền đầy đủ tài khoản và mật khẩu.');
+      return;
+    }
+    setIsLoading(true);
+    await new Promise(r => setTimeout(r, 600));
+    if (username === 'admin' && password === '123456') {
+      localStorage.setItem('userRole', 'super_admin');
+      navigate('/admin');
+    } else if (username === 'staff' && password === '123456') {
+      localStorage.setItem('userRole', 'staff');
+      navigate('/admin');
+    } else {
+      setError('Sai tài khoản hoặc mật khẩu. Vui lòng thử lại.');
+      setIsLoading(false);
+    }
+  };
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-100 to-forest-light flex items-center justify-center p-6 font-sans">
+      <div className="max-w-md w-full">
+        <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden">
+          <div className="bg-forest-green px-10 pt-10 pb-8 text-center">
+            <h1 className="text-3xl font-serif font-bold text-white tracking-widest">TÂM BẢN</h1>
+            <p className="text-white/60 text-xs mt-2 uppercase tracking-widest">Hệ thống quản trị nội bộ</p>
+          </div>
+          <div className="px-10 py-8">
+            <form onSubmit={handleLogin} className="space-y-5" noValidate>
+              {error && (
+                <div className="flex items-start gap-2.5 bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl" role="alert">
+                  <svg className="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
+                  </svg>
+                  {error}
+                </div>
+              )}
+              <div>
+                <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Tài khoản</label>
+                <input
+                  type="text"
+                  autoComplete="username"
+                  autoFocus
+                  value={username}
+                  onChange={e => { setUsername(e.target.value); setError(''); }}
+                  placeholder="Nhập tên đăng nhập..."
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/25 focus:border-forest-green transition-all"
+                />
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-500 uppercase tracking-wider mb-2">Mật khẩu</label>
+                <div className="relative">
+                  <input
+                    type={showPw ? 'text' : 'password'}
+                    autoComplete="current-password"
+                    value={password}
+                    onChange={e => { setPassword(e.target.value); setError(''); }}
+                    placeholder="••••••••"
+                    className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/25 focus:border-forest-green transition-all pr-11"
+                  />
+                  <button
+                    type="button"
+                    onClick={() => setShowPw(v => !v)}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+                    aria-label={showPw ? 'An mat khau' : 'Hien mat khau'}
+                  >
+                    {showPw
+                      ? <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13.875 18.825A10.05 10.05 0 0112 19c-4.478 0-8.268-2.943-9.543-7a9.97 9.97 0 011.563-3.029m5.858.908a3 3 0 114.243 4.243M9.878 9.878l4.242 4.242M9.88 9.88l-3.29-3.29m7.532 7.532l3.29 3.29M3 3l3.59 3.59m0 0A9.953 9.953 0 0112 5c4.478 0 8.268 2.943 9.543 7a10.025 10.025 0 01-4.132 5.411m0 0L21 21"/></svg>
+                      : <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                    }
+                  </button>
+                </div>
+              </div>
+              <button
+                type="submit"
+                disabled={isLoading}
+                className="w-full flex items-center justify-center gap-2 bg-forest-green text-white py-3.5 rounded-xl font-bold text-sm tracking-widest hover:bg-[#1E5225] disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] transition-all duration-200 shadow-lg shadow-forest-dark/20 mt-2"
+              >
+                {isLoading ? (
+                  <>
+                    <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                    </svg>
+                    Dang xac thuc...
+                  </>
+                ) : 'DANG NHAP'}
+              </button>
+            </form>
+            <p className="text-center text-gray-400 text-xs mt-7 italic">
+              Chi danh cho nhan vien TAM BAN Homestay
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/admin/DatPhongPage.jsx">
+import React, { useState, useEffect } from 'react';
+import { collection, getDocs, doc, updateDoc, orderBy, query } from 'firebase/firestore';
+import { db } from '../../lib/firebase';
+
+const STATUS_MAP = {
+  new:       { label: 'Mới', cls: 'bg-amber-100 text-amber-700 border-amber-200' },
+  confirmed: { label: 'Đã xác nhận', cls: 'bg-blue-100 text-blue-700 border-blue-200' },
+  done:      { label: 'Hoàn thành', cls: 'bg-green-100 text-green-700 border-green-200' },
+  cancelled: { label: 'Đã hủy', cls: 'bg-gray-100 text-gray-500 border-gray-200' },
+};
+
+function SkeletonRow() {
+  return (
+    <tr>
+      {[1,2,3,4,5].map(i => (
+        <td key={i} className="px-5 py-4">
+          <div className="h-4 bg-gray-200 rounded animate-pulse" style={{ width: `${60 + i * 10}%` }} />
+        </td>
+      ))}
+    </tr>
+  );
+}
+
+function Toast({ message, type, onClose }) {
+  useEffect(() => { const t = setTimeout(onClose, 3000); return () => clearTimeout(t); }, []);
+  return (
+    <div className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 ${type === 'error' ? 'bg-red-600' : 'bg-green-600'} text-white px-5 py-3.5 rounded-xl shadow-xl text-sm font-medium`}>
+      {type === 'error'
+        ? <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/></svg>
+        : <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>
+      }
+      {message}
+    </div>
+  );
+}
+
+function DetailModal({ booking, onClose, onStatusChange }) {
+  if (!booking) return null;
+  const s = STATUS_MAP[booking.status] || STATUS_MAP.new;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onClose} />
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-md w-full p-6 overflow-y-auto max-h-[90vh]">
+        <div className="flex items-start justify-between mb-5">
+          <div>
+            <h3 className="text-lg font-bold text-gray-900">{booking.name}</h3>
+            <p className="text-sm text-gray-400 mt-0.5">{booking.date}</p>
+          </div>
+          <button onClick={onClose} className="text-gray-400 hover:text-gray-700 p-1">
+            <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+          </button>
+        </div>
+
+        <div className="space-y-3 text-sm">
+          <Row icon="📞" label="Điện thoại" val={booking.phone} />
+          <Row icon="🛏️" label="Phòng" val={booking.roomType} />
+          <Row icon="👥" label="Số khách" val={`${booking.guests} khách`} />
+          <Row icon="📅" label="Nhận phòng" val={booking.checkin} />
+          <Row icon="📅" label="Trả phòng" val={booking.checkout} />
+          {booking.meals && booking.meals.length > 0 && (
+            <div className="flex gap-3">
+              <span className="text-base shrink-0">🍽️</span>
+              <div>
+                <p className="text-gray-400 font-medium mb-1">Ẩm thực đặt trước</p>
+                <ul className="space-y-0.5">
+                  {booking.meals.map(m => <li key={m} className="text-gray-700">• {m}</li>)}
+                </ul>
+              </div>
+            </div>
+          )}
+          {booking.note && <Row icon="📝" label="Ghi chú" val={booking.note} />}
+        </div>
+
+        <div className="mt-6 border-t border-gray-100 pt-5">
+          <p className="text-xs font-bold text-gray-400 uppercase tracking-wider mb-3">Cập nhật trạng thái</p>
+          <div className="grid grid-cols-2 gap-2">
+            {Object.entries(STATUS_MAP).map(([key, { label, cls }]) => (
+              <button key={key} onClick={() => onStatusChange(booking.id, key)}
+                className={`px-3 py-2 rounded-lg text-xs font-bold border transition-all ${booking.status === key ? cls + ' ring-2 ring-offset-1 ring-current' : 'bg-gray-50 text-gray-500 border-gray-200 hover:bg-gray-100'}`}>
+                {label}
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Row({ icon, label, val }) {
+  return (
+    <div className="flex gap-3">
+      <span className="text-base shrink-0">{icon}</span>
+      <div>
+        <p className="text-gray-400 font-medium">{label}</p>
+        <p className="text-gray-800">{val}</p>
+      </div>
+    </div>
+  );
+}
+
+export default function DatPhongPage() {
+  const [bookings, setBookings] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [selected, setSelected] = useState(null);
+  const [toast, setToast] = useState(null);
+  const [filter, setFilter] = useState('all');
+
+  const fetch = async () => {
+    try {
+      const q = query(collection(db, 'bookings'), orderBy('createdAt', 'desc'));
+      const snap = await getDocs(q);
+      setBookings(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+    } catch (err) {
+      console.error(err);
+      setToast({ message: 'Không thể tải danh sách đặt phòng.', type: 'error' });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => { fetch(); }, []);
+
+  // Mark as read when opened
+  const handleOpen = async (b) => {
+    setSelected(b);
+    if (b.status === 'new') {
+      try {
+        await updateDoc(doc(db, 'bookings', b.id), { status: 'confirmed' });
+        setBookings(prev => prev.map(x => x.id === b.id ? { ...x, status: 'confirmed' } : x));
+        setSelected({ ...b, status: 'confirmed' });
+      } catch (_) {}
+    }
+  };
+
+  const handleStatusChange = async (id, status) => {
+    try {
+      await updateDoc(doc(db, 'bookings', id), { status });
+      setBookings(prev => prev.map(x => x.id === id ? { ...x, status } : x));
+      setSelected(prev => prev && prev.id === id ? { ...prev, status } : prev);
+      setToast({ message: 'Cập nhật trạng thái thành công.', type: 'success' });
+    } catch (err) {
+      setToast({ message: 'Có lỗi xảy ra.', type: 'error' });
+    }
+  };
+
+  const filtered = filter === 'all' ? bookings : bookings.filter(b => b.status === filter);
+  const newCount = bookings.filter(b => b.status === 'new').length;
+
+  return (
+    <>
+      <div>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2.5">
+              Quản lý Đặt phòng
+              {newCount > 0 && (
+                <span className="bg-red-500 text-white text-xs font-bold px-2 py-0.5 rounded-full min-w-[20px] text-center">
+                  {newCount}
+                </span>
+              )}
+            </h1>
+            <p className="text-sm text-gray-400 mt-0.5">
+              {isLoading ? 'Đang tải...' : `${bookings.length} yêu cầu · ${newCount} chưa đọc`}
+            </p>
+          </div>
+        </div>
+
+        {/* Filter tabs */}
+        <div className="flex gap-2 mb-6 flex-wrap">
+          {[['all', 'Tất cả'], ['new', 'Mới'], ['confirmed', 'Đã xác nhận'], ['done', 'Hoàn thành'], ['cancelled', 'Đã hủy']].map(([key, label]) => (
+            <button key={key} onClick={() => setFilter(key)}
+              className={`px-4 py-1.5 rounded-full text-xs font-bold border transition-all ${filter === key ? 'bg-forest-green text-white border-forest-green' : 'bg-white text-gray-500 border-gray-200 hover:border-forest-green hover:text-forest-green'}`}>
+              {label}
+              {key === 'new' && newCount > 0 && (
+                <span className="ml-1.5 bg-red-500 text-white text-[10px] px-1.5 py-0.5 rounded-full">{newCount}</span>
+              )}
+            </button>
+          ))}
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          {/* Mobile cards */}
+          {!isLoading && filtered.length > 0 && (
+            <div className="sm:hidden divide-y divide-gray-100">
+              {filtered.map(b => {
+                const s = STATUS_MAP[b.status] || STATUS_MAP.new;
+                return (
+                  <button key={b.id} onClick={() => handleOpen(b)}
+                    className={`w-full px-5 py-4 flex items-start justify-between gap-3 text-left hover:bg-gray-50 transition-colors ${b.status === 'new' ? 'bg-amber-50' : ''}`}>
+                    <div className="min-w-0">
+                      <p className="font-semibold text-gray-800 text-sm">{b.name}</p>
+                      <p className="text-gray-400 text-xs mt-0.5">{b.phone} · {b.checkin} → {b.checkout}</p>
+                      <p className="text-gray-500 text-xs mt-0.5 truncate">{b.roomType}</p>
+                    </div>
+                    <span className={`text-[11px] font-bold px-2.5 py-1 rounded-full border shrink-0 ${s.cls}`}>{s.label}</span>
+                  </button>
+                );
+              })}
+            </div>
+          )}
+
+          {/* Desktop table */}
+          <table className="w-full text-left hidden sm:table">
+            <thead className="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th className="px-5 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Khách hàng</th>
+                <th className="px-5 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Phòng</th>
+                <th className="px-5 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Ngày ở</th>
+                <th className="px-5 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Ngày gửi</th>
+                <th className="px-5 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Trạng thái</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {isLoading
+                ? Array.from({ length: 5 }).map((_, i) => <SkeletonRow key={i} />)
+                : filtered.length === 0
+                  ? (
+                    <tr>
+                      <td colSpan="5" className="px-6 py-16 text-center text-gray-400">
+                        Không có yêu cầu đặt phòng nào.
+                      </td>
+                    </tr>
+                  )
+                  : filtered.map(b => {
+                    const s = STATUS_MAP[b.status] || STATUS_MAP.new;
+                    return (
+                      <tr key={b.id} onClick={() => handleOpen(b)}
+                        className={`hover:bg-gray-50 transition-colors cursor-pointer ${b.status === 'new' ? 'bg-amber-50/50' : ''}`}>
+                        <td className="px-5 py-4">
+                          <p className="font-semibold text-gray-800 text-sm">{b.name}</p>
+                          <p className="text-gray-400 text-xs mt-0.5">{b.phone}</p>
+                        </td>
+                        <td className="px-5 py-4 text-gray-600 text-sm">{b.roomType}</td>
+                        <td className="px-5 py-4 text-gray-500 text-sm">{b.checkin} → {b.checkout}</td>
+                        <td className="px-5 py-4 text-gray-400 text-sm">{b.date}</td>
+                        <td className="px-5 py-4">
+                          <span className={`text-xs font-bold px-3 py-1 rounded-full border ${s.cls}`}>{s.label}</span>
+                        </td>
+                      </tr>
+                    );
+                  })
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <DetailModal booking={selected} onClose={() => setSelected(null)} onStatusChange={handleStatusChange} />
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+    </>
+  );
+}
+</file>
+
+<file path="src/pages/admin/NhatKyListPage.jsx">
+import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { collection, getDocs, doc, deleteDoc, orderBy, query } from 'firebase/firestore';
+import { db } from '../../lib/firebase';
+
+function SkeletonRow() {
+  return (
+    <tr>
+      <td className="px-6 py-4">
+        <div className="h-4 bg-gray-200 rounded animate-pulse w-3/4" />
+        <div className="h-3 bg-gray-100 rounded animate-pulse w-1/3 mt-1.5" />
+      </td>
+      <td className="px-6 py-4"><div className="h-5 bg-gray-200 rounded-full animate-pulse w-20" /></td>
+      <td className="px-6 py-4"><div className="h-4 bg-gray-200 rounded animate-pulse w-24" /></td>
+      <td className="px-6 py-4 text-right"><div className="h-4 bg-gray-200 rounded animate-pulse w-16 ml-auto" /></td>
+    </tr>
+  );
+}
+
+function DeleteModal({ post, onConfirm, onCancel, isDeleting }) {
+  if (!post) return null;
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm" onClick={onCancel} />
+      <div className="relative bg-white rounded-2xl shadow-2xl max-w-sm w-full p-6">
+        <div className="flex items-center justify-center w-12 h-12 bg-red-100 rounded-full mx-auto mb-4">
+          <svg className="w-6 h-6 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+          </svg>
+        </div>
+        <h3 className="text-lg font-bold text-gray-900 text-center">Xóa bài viết?</h3>
+        <p className="text-sm text-gray-500 text-center mt-2 leading-relaxed">
+          Bài <span className="font-semibold text-gray-700">"{post.title}"</span> sẽ bị xóa vĩnh viễn.
+        </p>
+        <div className="flex gap-3 mt-6">
+          <button onClick={onCancel} disabled={isDeleting}
+            className="flex-1 px-4 py-2.5 border border-gray-200 rounded-xl text-sm font-medium text-gray-600 hover:bg-gray-50 transition-colors disabled:opacity-50">
+            Hủy
+          </button>
+          <button onClick={onConfirm} disabled={isDeleting}
+            className="flex-1 px-4 py-2.5 bg-red-600 text-white rounded-xl text-sm font-bold hover:bg-red-700 active:scale-[0.98] transition-all disabled:opacity-70 flex items-center justify-center gap-2">
+            {isDeleting ? (
+              <>
+                <svg className="w-3.5 h-3.5 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                </svg>
+                Đang xóa...
+              </>
+            ) : 'Xóa vĩnh viễn'}
+          </button>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function Toast({ message, type, onClose }) {
+  useEffect(() => {
+    const t = setTimeout(onClose, 3000);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <div className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 ${type === 'error' ? 'bg-red-600' : 'bg-green-600'} text-white px-5 py-3.5 rounded-xl shadow-xl text-sm font-medium`}>
+      {type === 'error'
+        ? <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/></svg>
+        : <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>
+      }
+      {message}
+    </div>
+  );
+}
+
+export default function NhatKyListPage() {
+  const navigate = useNavigate();
+  const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [deleteTarget, setDeleteTarget] = useState(null);
+  const [isDeleting, setIsDeleting] = useState(false);
+  const [toast, setToast] = useState(null);
+
+  const fetchPosts = async () => {
+    try {
+      const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
+      const snap = await getDocs(q);
+      setPosts(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+    } catch (err) {
+      console.error('Lỗi khi tải:', err);
+      setToast({ message: 'Không thể tải danh sách bài viết.', type: 'error' });
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  useEffect(() => { fetchPosts(); }, []);
+
+  const confirmDelete = async () => {
+    if (!deleteTarget) return;
+    setIsDeleting(true);
+    try {
+      await deleteDoc(doc(db, 'posts', deleteTarget.id));
+      setPosts(prev => prev.filter(p => p.id !== deleteTarget.id));
+      setToast({ message: 'Đã xóa bài viết thành công.', type: 'success' });
+    } catch (err) {
+      console.error('Lỗi khi xóa:', err);
+      setToast({ message: 'Không thể xóa. Vui lòng thử lại.', type: 'error' });
+    } finally {
+      setIsDeleting(false);
+      setDeleteTarget(null);
+    }
+  };
+
+  return (
+    <>
+      <div>
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
+          <div>
+            <h1 className="text-2xl font-bold text-gray-900">Quản lý Nhật ký</h1>
+            <p className="text-sm text-gray-400 mt-0.5">{isLoading ? 'Đang tải...' : `${posts.length} bài viết`}</p>
+          </div>
+          <button onClick={() => navigate('/admin/nhat-ky/tao-moi')}
+            className="inline-flex items-center gap-2 bg-forest-medium text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1E5225] active:scale-[0.98] transition-all shadow-md shadow-[#3D8B47]/20">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4"/>
+            </svg>
+            Viết bài mới
+          </button>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          {/* Mobile card list */}
+          {!isLoading && posts.length > 0 && (
+            <div className="sm:hidden divide-y divide-gray-100">
+              {posts.map(post => (
+                <div key={post.id} className="px-5 py-4 flex items-start justify-between gap-3">
+                  <div className="min-w-0">
+                    <p className="font-medium text-gray-800 text-sm truncate">{post.title}</p>
+                    <div className="flex items-center gap-2 mt-1">
+                      <span className="bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full text-[11px]">{post.tag}</span>
+                      <span className="text-gray-400 text-xs">{post.date}</span>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 shrink-0">
+                    <button onClick={() => navigate(`/admin/nhat-ky/sua/${post.id}`)} className="text-forest-medium hover:text-forest-dark text-xs font-bold">Sửa</button>
+                    <button onClick={() => setDeleteTarget(post)} className="text-red-400 hover:text-red-600 text-xs font-bold">Xóa</button>
+                  </div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* Desktop table */}
+          <table className="w-full text-left hidden sm:table">
+            <thead className="bg-gray-50 border-b border-gray-100">
+              <tr>
+                <th className="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Tiêu đề</th>
+                <th className="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Chủ đề</th>
+                <th className="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider">Ngày đăng</th>
+                <th className="px-6 py-4 text-xs font-bold text-gray-400 uppercase tracking-wider text-right">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-100">
+              {isLoading
+                ? Array.from({ length: 5 }).map((_, i) => <SkeletonRow key={i} />)
+                : posts.length === 0
+                  ? (
+                    <tr>
+                      <td colSpan="4" className="px-6 py-16 text-center">
+                        <svg className="w-12 h-12 text-gray-200 mx-auto mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+                        </svg>
+                        <p className="text-gray-400 font-medium">Chưa có bài viết nào</p>
+                      </td>
+                    </tr>
+                  )
+                  : posts.map(post => (
+                    <tr key={post.id} className="hover:bg-gray-50 transition-colors">
+                      <td className="px-6 py-4 font-medium text-gray-800 max-w-xs">
+                        <p className="truncate">{post.title}</p>
+                      </td>
+                      <td className="px-6 py-4">
+                        <span className="bg-forest-light text-forest-dark px-3 py-1 rounded-full text-xs font-medium">{post.tag}</span>
+                      </td>
+                      <td className="px-6 py-4 text-gray-500 text-sm">{post.date}</td>
+                      <td className="px-6 py-4 text-right">
+                        <div className="flex items-center justify-end gap-4">
+                          <button onClick={() => navigate(`/admin/nhat-ky/sua/${post.id}`)} className="text-forest-medium hover:text-forest-dark text-sm font-bold">Sửa</button>
+                          <button onClick={() => setDeleteTarget(post)} className="text-red-400 hover:text-red-600 text-sm font-bold">Xóa</button>
+                        </div>
+                      </td>
+                    </tr>
+                  ))
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <DeleteModal post={deleteTarget} onConfirm={confirmDelete} onCancel={() => setDeleteTarget(null)} isDeleting={isDeleting} />
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+    </>
+  );
+}
+</file>
+
+<file path="src/pages/admin/SuaPage.jsx">
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { doc, getDoc, updateDoc } from 'firebase/firestore';
+import { db } from '../../lib/firebase';
+import TiptapEditor from '../../components/TiptapEditor';
+
+const TAGS = ['Chuyện Của Mùa', 'Góc Lữ Khách', 'Văn Hóa Bản Địa', 'Con Người', 'Hậu Trường'];
+
+function Toast({ message, type, onClose }) {
+  useEffect(() => {
+    const t = setTimeout(onClose, 3500);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <div className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 ${type === 'error' ? 'bg-red-600' : 'bg-green-600'} text-white px-5 py-3.5 rounded-xl shadow-xl text-sm font-medium`}>
+      {type === 'error'
+        ? <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/></svg>
+        : <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>
+      }
+      {message}
+    </div>
+  );
+}
+
+export default function SuaPage() {
+  const { id: postId } = useParams();
+  const navigate = useNavigate();
+
+  const [title, setTitle] = useState('');
+  const [tag, setTag] = useState(TAGS[0]);
+  const [imageUrl, setImageUrl] = useState('');
+  const [content, setContent] = useState('');
+  const [isLoading, setIsLoading] = useState(true);
+  const [isUpdating, setIsUpdating] = useState(false);
+  const [toast, setToast] = useState(null);
+  const [titleError, setTitleError] = useState('');
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const docRef = doc(db, 'posts', postId);
+        const snap = await getDoc(docRef);
+        if (snap.exists()) {
+          const d = snap.data();
+          setTitle(d.title || '');
+          setTag(d.tag || TAGS[0]);
+          setImageUrl(d.imageUrl || '');
+          setContent(d.content || '');
+        } else {
+          setNotFound(true);
+        }
+      } catch (err) {
+        console.error('Lỗi tải dữ liệu:', err);
+        setToast({ message: 'Không thể tải bài viết. Vui lòng thử lại.', type: 'error' });
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchData();
+  }, [postId]);
+
+  const handleUpdate = async (e) => {
+    e.preventDefault();
+    if (!title.trim()) {
+      setTitleError('Vui lòng nhập tiêu đề bài viết.');
+      return;
+    }
+    setIsUpdating(true);
+    setTitleError('');
+    try {
+      await updateDoc(doc(db, 'posts', postId), {
+        title: title.trim(),
+        tag,
+        imageUrl,
+        content,
+      });
+      setToast({ message: 'Cập nhật thành công! Đang quay lại...', type: 'success' });
+      setTimeout(() => navigate('/admin/nhat-ky'), 1500);
+    } catch (err) {
+      console.error('Lỗi khi cập nhật:', err);
+      setToast({ message: 'Có lỗi xảy ra. Vui lòng thử lại.', type: 'error' });
+      setIsUpdating(false);
+    }
+  };
+
+  // Loading skeleton
+  if (isLoading) {
+    return (
+      <div className="max-w-4xl mx-auto space-y-6">
+        <div className="flex items-center gap-4">
+          <div className="w-9 h-9 bg-gray-200 rounded-full animate-pulse" />
+          <div className="h-6 bg-gray-200 rounded animate-pulse w-48" />
+        </div>
+        <div className="bg-white rounded-2xl border border-gray-100 p-8 space-y-6">
+          <div className="h-10 bg-gray-200 rounded animate-pulse w-3/4" />
+          <div className="grid grid-cols-2 gap-6 pt-6 border-t border-gray-100">
+            <div className="h-12 bg-gray-200 rounded-xl animate-pulse" />
+            <div className="h-12 bg-gray-200 rounded-xl animate-pulse" />
+          </div>
+          <div className="h-64 bg-gray-100 rounded-xl animate-pulse pt-6 border-t border-gray-100" />
+        </div>
+      </div>
+    );
+  }
+
+  // Not found state
+  if (notFound) {
+    return (
+      <div className="max-w-4xl mx-auto text-center py-20">
+        <svg className="w-16 h-16 text-gray-200 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+        </svg>
+        <h2 className="text-lg font-bold text-gray-700">Không tìm thấy bài viết</h2>
+        <p className="text-gray-400 text-sm mt-2">Bài viết này có thể đã bị xóa hoặc không tồn tại.</p>
+        <button
+          onClick={() => navigate('/admin/nhat-ky')}
+          className="mt-6 inline-flex items-center gap-2 bg-forest-green text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1E5225] transition-all"
+        >
+          Quay lại danh sách
+        </button>
+      </div>
+    );
+  }
+
+  return (
+    <>
+      <div className="max-w-4xl mx-auto">
+        {/* Header */}
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => navigate('/admin/nhat-ky')}
+              className="w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-sm text-gray-400 hover:text-forest-green hover:shadow-md transition-all"
+            >
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <div>
+              <h1 className="text-xl font-bold text-gray-900">Chỉnh sửa câu chuyện</h1>
+              <p className="text-xs text-gray-400 mt-0.5 truncate max-w-xs">{title}</p>
+            </div>
+          </div>
+          <button
+            onClick={handleUpdate}
+            disabled={isUpdating}
+            className="inline-flex items-center gap-2 bg-forest-green text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1E5225] disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] transition-all shadow-lg shadow-forest-dark/20"
+          >
+            {isUpdating ? (
+              <>
+                <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                </svg>
+                Đang lưu...
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                </svg>
+                Lưu thay đổi
+              </>
+            )}
+          </button>
+        </div>
+
+        {/* Form card */}
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="p-8 space-y-8">
+            {/* Title */}
+            <div>
+              <input
+                type="text"
+                placeholder="Tiêu đề bài viết..."
+                value={title}
+                onChange={e => { setTitle(e.target.value); setTitleError(''); }}
+                className="w-full text-3xl md:text-4xl font-serif text-forest-green font-bold placeholder-gray-200 border-none focus:ring-0 px-0 bg-transparent outline-none"
+              />
+              {titleError && (
+                <p className="text-red-500 text-xs mt-2 flex items-center gap-1">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/></svg>
+                  {titleError}
+                </p>
+              )}
+            </div>
+
+            {/* Meta fields */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-8">
+              <div>
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Chủ đề câu chuyện</label>
+                <select
+                  value={tag}
+                  onChange={e => setTag(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/20 focus:border-forest-green transition-all text-gray-700"
+                >
+                  {TAGS.map(t => <option key={t}>{t}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Đường dẫn ảnh bìa (URL)</label>
+                <input
+                  type="url"
+                  placeholder="https://images.unsplash.com/..."
+                  value={imageUrl}
+                  onChange={e => setImageUrl(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/20 focus:border-forest-green transition-all text-gray-700"
+                />
+              </div>
+            </div>
+
+            {/* Content editor */}
+            <div className="border-t border-gray-100 pt-8">
+              <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Nội dung chi tiết</label>
+              <TiptapEditor content={content} onChange={setContent} />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+    </>
+  );
+}
+</file>
+
+<file path="src/pages/admin/TaoMoiPage.jsx">
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../../lib/firebase';
+import TiptapEditor from '../../components/TiptapEditor';
+
+const TAGS = ['Chuyện Của Mùa', 'Góc Lữ Khách', 'Văn Hóa Bản Địa', 'Con Người', 'Hậu Trường'];
+
+function Toast({ message, type, onClose }) {
+  React.useEffect(() => {
+    const t = setTimeout(onClose, 3500);
+    return () => clearTimeout(t);
+  }, []);
+  return (
+    <div className={`fixed bottom-6 right-6 z-50 flex items-center gap-3 ${type === 'error' ? 'bg-red-600' : 'bg-green-600'} text-white px-5 py-3.5 rounded-xl shadow-xl text-sm font-medium`}>
+      {type === 'error'
+        ? <svg className="w-4 h-4 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/></svg>
+        : <svg className="w-4 h-4 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/></svg>
+      }
+      {message}
+    </div>
+  );
+}
+
+export default function TaoMoiPage() {
+  const navigate = useNavigate();
+  const [title, setTitle] = useState('');
+  const [tag, setTag] = useState(TAGS[0]);
+  const [imageUrl, setImageUrl] = useState('');
+  const [content, setContent] = useState('');
+  const [isPublishing, setIsPublishing] = useState(false);
+  const [toast, setToast] = useState(null);
+  const [titleError, setTitleError] = useState('');
+  const [hasDraft, setHasDraft] = useState(() => !!localStorage.getItem('draft_new'));
+
+  // Auto-save draft every 30s
+  React.useEffect(() => {
+    const save = () => {
+      if (!title && !content) return;
+      localStorage.setItem('draft_new', JSON.stringify({ title, tag, imageUrl, content }));
+      setHasDraft(true);
+    };
+    const t = setInterval(save, 30000);
+    return () => clearInterval(t);
+  }, [title, tag, imageUrl, content]);
+
+  // Restore draft on mount
+  React.useEffect(() => {
+    const draft = localStorage.getItem('draft_new');
+    if (draft) {
+      try {
+        const d = JSON.parse(draft);
+        if (d.title) setTitle(d.title);
+        if (d.tag) setTag(d.tag);
+        if (d.imageUrl) setImageUrl(d.imageUrl);
+        if (d.content) setContent(d.content);
+      } catch (_) {}
+    }
+  }, []);
+
+  const handlePublish = async (e) => {
+    e.preventDefault();
+    if (!title.trim()) { setTitleError('Vui lòng nhập tiêu đề bài viết.'); return; }
+    setIsPublishing(true);
+    setTitleError('');
+    try {
+      await addDoc(collection(db, 'posts'), {
+        title: title.trim(), tag, imageUrl, content,
+        author: 'Admin',
+        date: new Date().toLocaleDateString('vi-VN'),
+        createdAt: Date.now(),
+      });
+      localStorage.removeItem('draft_new');
+      setHasDraft(false);
+      setToast({ message: 'Xuất bản thành công! Đang quay lại...', type: 'success' });
+      setTimeout(() => navigate('/admin/nhat-ky'), 1500);
+    } catch (err) {
+      console.error('Lỗi khi đăng bài:', err);
+      setToast({ message: 'Có lỗi xảy ra. Vui lòng kiểm tra kết nối mạng.', type: 'error' });
+      setIsPublishing(false);
+    }
+  };
+
+  return (
+    <>
+      <div className="max-w-4xl mx-auto">
+        <div className="flex items-center justify-between mb-8">
+          <div className="flex items-center gap-4">
+            <button onClick={() => navigate('/admin/nhat-ky')}
+              className="w-9 h-9 bg-white rounded-full flex items-center justify-center shadow-sm text-gray-400 hover:text-forest-green hover:shadow-md transition-all">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
+              </svg>
+            </button>
+            <div>
+              <h1 className="text-xl font-bold text-gray-900">Chắp bút câu chuyện mới</h1>
+              <p className="text-xs text-gray-400 mt-0.5 flex items-center gap-1.5">
+              Nhật ký TÂM BẢN Homestay
+              {hasDraft && <span className="text-amber-500 text-[10px] font-bold bg-amber-50 px-1.5 py-0.5 rounded">● Bản nháp</span>}
+            </p>
+            </div>
+          </div>
+          <button onClick={handlePublish} disabled={isPublishing}
+            className="inline-flex items-center gap-2 bg-forest-green text-white px-5 py-2.5 rounded-xl text-sm font-bold hover:bg-[#1E5225] disabled:opacity-70 disabled:cursor-not-allowed active:scale-[0.98] transition-all shadow-lg shadow-forest-dark/20">
+            {isPublishing ? (
+              <>
+                <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                </svg>
+                Đang lưu...
+              </>
+            ) : (
+              <>
+                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/>
+                </svg>
+                Xuất bản
+              </>
+            )}
+          </button>
+        </div>
+
+        <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+          <div className="p-8 space-y-8">
+            <div>
+              <input type="text" placeholder="Tiêu đề bài viết..." value={title}
+                onChange={e => { setTitle(e.target.value); setTitleError(''); }}
+                className="w-full text-3xl md:text-4xl font-serif text-forest-green font-bold placeholder-gray-200 border-none focus:ring-0 px-0 bg-transparent outline-none"
+              />
+              {titleError && (
+                <p className="text-red-500 text-xs mt-2 flex items-center gap-1">
+                  <svg className="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/></svg>
+                  {titleError}
+                </p>
+              )}
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 border-t border-gray-100 pt-8">
+              <div>
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Chủ đề câu chuyện</label>
+                <select value={tag} onChange={e => setTag(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/20 focus:border-forest-green transition-all text-gray-700">
+                  {TAGS.map(t => <option key={t}>{t}</option>)}
+                </select>
+              </div>
+              <div>
+                <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-2">Đường dẫn ảnh bìa (URL)</label>
+                <input type="url" placeholder="https://images.unsplash.com/..." value={imageUrl}
+                  onChange={e => setImageUrl(e.target.value)}
+                  className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-forest-green/20 focus:border-forest-green transition-all text-gray-700"
+                />
+              </div>
+            </div>
+
+            <div className="border-t border-gray-100 pt-8">
+              <label className="block text-xs font-bold text-gray-400 uppercase tracking-wider mb-4">Nội dung chi tiết</label>
+              <TiptapEditor content={content} onChange={setContent} />
+            </div>
+          </div>
+        </div>
+      </div>
+      {toast && <Toast {...toast} onClose={() => setToast(null)} />}
+    </>
+  );
+}
+</file>
+
+<file path="src/pages/AmThucPage.jsx">
+import React from 'react';
+import Navbar from '../components/Navbar';
+
+export default function AmThucPage() {
+  return (
+    <div className="bg-off-white min-h-screen font-sans">
+      <Navbar />
+
+      {/* Banner Tiêu đề Trang */}
+      <section className="relative min-h-[66vh] flex items-center justify-center bg-forest-dark text-white text-center overflow-hidden">
+         <div className="absolute inset-0 bg-cover bg-center hero-kenburns opacity-55" style={{ backgroundImage: "url('/images/35.png')" }}></div>
+         <div className="relative z-10 px-4">
+            <h2 className="text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-xl text-cream">Vị Của Đá & Lửa</h2>
+            <p className="font-light tracking-widest uppercase text-sm md:text-base opacity-90">Hành trình khám phá di sản ẩm thực người H'Mông</p>
+         </div>
+      </section>
+
+      {/* Lời tựa văn hóa */}
+      <section className="max-w-4xl mx-auto py-20 px-6 text-center">
+        <h3 className="text-3xl font-serif text-forest-green mb-6">Nơi đất cằn nở hoa</h3>
+        <p className="text-gray-600 font-light leading-relaxed text-lg">
+          Sống trên những mỏm đá tai mèo cằn cỗi quanh năm sương mù bao phủ, người H'Mông đã đúc kết ra một nền ẩm thực vô cùng đặc biệt. Không cầu kỳ gia vị, không hoa mỹ trong cách bày biện, ẩm thực nơi đây chinh phục người lữ khách bằng chính sự mộc mạc, hoang dã và vị ngọt nguyên bản từ núi rừng.
+        </p>
+        <div className="w-16 h-0.5 bg-forest-medium mx-auto mt-10"></div>
+      </section>
+
+      {/* Các Đặc Sản H'Mông (Storytelling) */}
+      <section className="max-w-6xl mx-auto pb-24 px-6 space-y-20">
+        
+        {/* Đặc sản 1: Mèn Mén */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/36.png" alt="Ngô và Mèn Mén" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Linh hồn của đá</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Mèn Mén & Canh Tẩu Chúa</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Nếu người Kinh coi cơm gạo là chính, thì với người H'Mông, hạt ngô mới là nguồn sống. Ngô tẻ được phơi khô, tẽ hạt, dùng cối đá xay thủ công nhiều lần rồi đem đồ (hấp) chín trên chảo gang. Mèn mén có vị ngọt bùi, hơi khô nên luôn được ăn kèm với bát canh "tẩu chúa" (canh rau cải đắng nấu nhạt) để làm dịu đi cái khô ráp, tạo nên một sự cân bằng tuyệt hảo.
+            </p>
+          </div>
+        </div>
+
+        {/* Đặc sản 2: Thắng Cố */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/37.png" alt="Nồi Thắng Cố" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Hương vị của chợ phiên</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Chảo Thắng Cố Ngựa</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Sẽ là một thiếu sót lớn nếu đến vùng cao mà chưa nếm thử Thắng Cố. Khởi nguyên là món ăn làm từ thịt và lục phủ ngũ tạng của ngựa, đun sôi sùng sục trong chảo gang khổng lồ cùng hơn 12 loại gia vị thảo mộc bản địa. Múc một bát Thắng Cố nóng hổi giữa chợ phiên lộng gió, thêm chút tương ớt Mường Khương, bạn sẽ hiểu thế nào là cái thú của đàn ông bản cao.
+            </p>
+          </div>
+        </div>
+
+        {/* Đặc sản 3: Gà Đen & Thịt Treo */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/38.png" alt="Gà đen và thịt hun khói" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Thức quà thết đãi khách quý</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Gà Đen & Lợn Treo Gác Bếp</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Giống gà đen H'Mông được chăn thả tự nhiên, thịt vô cùng săn chắc, hầm cùng thuốc bắc tạo ra thứ nước dùng thanh ngọt. Bên cạnh đó, những dải thịt lợn bản ướp mắc khén, hạt dổi treo lơ lửng trên gác bếp hong khói củi ròng rã nhiều tháng trời là món mồi nhậu "tốn rượu" nhất mỗi khi có khách đến thăm nhà.
+            </p>
+          </div>
+        </div>
+
+        {/* Đặc sản 4: Bánh Tam Giác Mạch */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/39.png" alt="Bánh Tam Giác Mạch" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Kết tinh của hoa đá</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Bánh Tam Giác Mạch</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Sau những vụ mùa hoa nở rực rỡ, hạt tam giác mạch được thu hoạch, xay nhuyễn mịn để làm bánh. Chiếc bánh được nhào nặn thủ công, nướng chín trên bếp than hồng mang màu tím nhạt đặc trưng. Vị bánh bùi bùi, xốp nhẹ, thoang thoảng mùi ngai ngái của cỏ dại, ăn một miếng là thấy cả mùa thu cao nguyên.
+            </p>
+          </div>
+        </div>
+
+        {/* Đặc sản 5: Bánh Dày Giã Tay (Thêm mới cho Lễ Hội) */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/40.png" alt="Bánh Dày Giã Tay" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Linh vật của Lễ Tết</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Bánh Dày Giã Tay (Pé Plẩu)</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Nếu người Kinh có bánh chưng, thì linh hồn trong mâm cỗ Tết Nào Pê Chầu và lễ hội Gầu Tào của người H'Mông chính là chiếc bánh dày. Gạo nếp nương thơm lừng được đồ chín, những thanh niên trai tráng khỏe mạnh nhất bản sẽ dùng chày gỗ giã liên tục lúc xôi còn bốc khói. Chiếc bánh tròn trịa tượng trưng cho mặt trời, mặt trăng và ước vọng về một năm no ấm.
+            </p>
+          </div>
+        </div>
+
+        {/* Đặc sản 6: Rượu Ngô */}
+        <div className="flex flex-col md:flex-row-reverse items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/41.png" alt="Rượu Ngô Men Lá" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Men say đại ngàn</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Rượu Ngô Men Lá</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Rượu được ủ từ thứ ngô tẻ hạt dẻo trồng trên núi đá, lên men bằng hơn 20 loại lá rừng bí truyền. Thứ chất lỏng trong vắt này có vị cay nồng nhưng hậu ngọt, uống bao nhiêu cũng chỉ lâng lâng chứ không hề nhức đầu. Nâng bát rượu ngô, hát điệu khèn bè, đó chính là bản sắc rực rỡ nhất của vùng cao.
+            </p>
+          </div>
+        </div>
+
+        {/* Đặc sản 7: Trà Shan Tuyết */}
+        <div className="flex flex-col md:flex-row items-center gap-12">
+          <div className="w-full md:w-1/2 overflow-hidden rounded-xl aspect-[4/3] shadow-md">
+            <img src="/images/42.png" alt="Trà Shan Tuyết" className="w-full h-full object-cover hover:scale-105 transition duration-700"/>
+          </div>
+          <div className="w-full md:w-1/2">
+            <span className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2 block">Sự tĩnh lặng của sương mai</span>
+            <h4 className="text-3xl font-serif text-forest-green mb-4">Trà Cổ Thụ Shan Tuyết</h4>
+            <p className="text-gray-600 font-light mb-6 leading-relaxed">
+              Khác với sự nồng nhiệt của rượu ngô, Trà cổ thụ Shan Tuyết là thức uống của những sớm mai tĩnh lặng. Từng búp trà ngậm sương được hái từ những gốc cây rêu phong hàng trăm năm tuổi vươn mình giữa đỉnh mây mù. Trà pha ra có nước màu vàng óng, đọng lại vị ngọt thanh sâu lắng, mang đến sự thư thái tuyệt đối cho tâm hồn lữ khách.
+            </p>
+          </div>
+        </div>
+
+      </section>
+
+      {/* Lời mời mọc khéo léo */}
+      <section className="bg-forest-green text-white py-16 text-center px-6">
+         <h3 className="text-2xl font-serif mb-4">Thưởng thức tại TÂM BẢN</h3>
+         <p className="font-light opacity-90 max-w-2xl mx-auto mb-8">
+           Khi đặt phòng tại TÂM BẢN, bạn có thể yêu cầu chúng tôi chuẩn bị trước những mâm cơm mang đậm dấu ấn văn hóa này để trải nghiệm trọn vẹn hương vị vùng cao.
+         </p>
+         <a href="/" className="inline-block bg-white text-forest-green px-8 py-3 font-bold text-sm tracking-widest hover:bg-off-white transition-all duration-300 rounded-sm">
+           VỀ TRANG CHỦ ĐẶT PHÒNG
+         </a>
+      </section>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/BungalowPage.jsx">
+import React, { useState, useRef } from 'react';
+import Navbar from '../components/Navbar';
+
+const ROOMS = [
+  {
+    id: 'don',
+    name: 'Phòng Riêng',
+    badge: 'Chỉ 3 phòng',            // Khan hiếm: tạo cảm giác cần đặt sớm
+    price: 'Từ 400.000 VNĐ / đêm',
+    desc: 'Phòng khép kín ấm cúng, vách gỗ thông mộc mạc giữa đại ngàn Mèo Vạc. Tối đa 2 khách — dành cho cặp đôi hoặc người tìm sự riêng tư trọn vẹn. Cả homestay chỉ có 3 phòng riêng. Giá linh hoạt theo bữa ăn: 400k chỉ phòng · 450k kèm bữa sáng · 750k trọn 3 bữa bản địa.',
+    features: ['Khép kín, riêng tư', 'Phòng tắm riêng', 'Tối đa 2 khách', 'View núi đá yên tĩnh'],
+    images: [
+      '/images/13.png',
+      '/images/14.png',
+      '/images/15.png',
+    ],
+    reverse: false,
+  },
+  {
+    id: 'dorm',
+    name: 'Giường Dorm',
+    badge: 'Không Giường Tầng',
+    price: '120.000 VNĐ / giường',
+    desc: 'Phòng chung rộng rãi với 20 giường đơn, ấm áp mà vẫn tinh tế. Chúng tôi nói "Không" với giường tầng — mỗi giường đều có không gian và sự riêng tư của riêng mình.',
+    features: ['20 giường đơn rộng rãi', 'Tủ đựng đồ có khóa', 'WC chung sạch sẽ', 'Cộng đồng thân thiện'],
+    images: [
+      '/images/16.png',
+      '/images/17.png',
+      '/images/18.png',
+    ],
+    reverse: true,
+  },
+];
+
+function RoomCarousel({ images, badge }) {
+  const [index, setIndex] = useState(0);
+  const touchStartX = useRef(null);
+
+  const prev = () => setIndex(i => (i === 0 ? images.length - 1 : i - 1));
+  const next = () => setIndex(i => (i === images.length - 1 ? 0 : i + 1));
+
+  const onTouchStart = e => { touchStartX.current = e.touches[0].clientX; };
+  const onTouchEnd = e => {
+    if (touchStartX.current === null) return;
+    const dx = e.changedTouches[0].clientX - touchStartX.current;
+    if (dx < -40) next();
+    else if (dx > 40) prev();
+    touchStartX.current = null;
+  };
+
+  return (
+    <div className="relative overflow-hidden rounded-2xl shadow-lg aspect-[4/3] select-none"
+      onTouchStart={onTouchStart} onTouchEnd={onTouchEnd}>
+      {badge && (
+        <span className="absolute top-5 right-5 bg-forest-green text-white px-3 py-1.5 text-[10px] tracking-widest uppercase z-20 shadow-md rounded-sm">
+          {badge}
+        </span>
+      )}
+      <div className="relative w-full h-full">
+        {images.map((src, i) => (
+          <img key={i} src={src} alt={`Anh ${i + 1}`}
+            className={`absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ${i === index ? 'opacity-100' : 'opacity-0'}`}
+            loading="lazy"
+          />
+        ))}
+      </div>
+      <button onClick={prev}
+        className="absolute left-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/40 hover:bg-black/65 text-white rounded-full flex items-center justify-center transition-all z-10 active:scale-95"
+        aria-label="Anh truoc">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
+        </svg>
+      </button>
+      <button onClick={next}
+        className="absolute right-3 top-1/2 -translate-y-1/2 w-9 h-9 bg-black/40 hover:bg-black/65 text-white rounded-full flex items-center justify-center transition-all z-10 active:scale-95"
+        aria-label="Anh tiep">
+        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7"/>
+        </svg>
+      </button>
+      <div className="absolute bottom-4 left-0 right-0 flex justify-center gap-2 z-10">
+        {images.map((_, i) => (
+          <button key={i} onClick={() => setIndex(i)}
+            className={`h-2 rounded-full transition-all duration-300 ${i === index ? 'bg-white w-5' : 'bg-white/50 w-2'}`}
+            aria-label={`Anh ${i + 1}`}
+          />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function BungalowPage() {
+  return (
+    <div className="bg-off-white min-h-screen font-sans">
+      <Navbar />
+
+      <section className="relative min-h-[58vh] flex items-center justify-center bg-forest-dark text-white text-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center hero-kenburns opacity-50"
+          style={{ backgroundImage: "url('/images/12.png')" }} />
+        <div className="relative z-10 px-4">
+          <h2 className="text-5xl md:text-6xl font-serif font-bold mb-4 drop-shadow-xl text-cream">Các Hạng Phòng</h2>
+          <p className="font-light tracking-widest uppercase text-sm opacity-90">Trở về với mộc mạc — Ôm trọn bình yên</p>
+        </div>
+      </section>
+
+      <section className="max-w-5xl mx-auto py-20 px-6 space-y-24">
+        {ROOMS.map(room => (
+          <div key={room.id}
+            className={`flex flex-col ${room.reverse ? 'md:flex-row-reverse' : 'md:flex-row'} items-center gap-10 md:gap-14`}>
+            <div className="w-full md:w-1/2">
+              <RoomCarousel images={room.images} badge={room.badge} />
+            </div>
+            <div className="w-full md:w-1/2">
+              <h3 className="text-3xl font-serif text-forest-green mb-3">{room.name}</h3>
+              <p className="text-gray-600 font-light leading-relaxed mb-6">{room.desc}</p>
+              <ul className="space-y-2 mb-6">
+                {room.features.map(f => (
+                  <li key={f} className="flex items-center gap-2.5 text-sm text-gray-600">
+                    <svg className="w-4 h-4 text-forest-medium shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                    </svg>
+                    {f}
+                  </li>
+                ))}
+              </ul>
+              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+                <span className="inline-block bg-off-white border border-forest-medium text-forest-medium font-semibold text-base px-5 py-2.5 rounded-sm">
+                  {room.price}
+                </span>
+                <a href="/#dat-phong"
+                  className="inline-flex items-center gap-2 bg-forest-medium text-white px-5 py-2.5 text-xs tracking-widest uppercase font-bold hover:bg-[#1E5225] active:scale-95 transition-all rounded-sm shadow-sm">
+                  Đặt ngay
+                  <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        ))}
+      </section>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/DiaHinhPage.jsx">
+import React from 'react';
+import Navbar from '../components/Navbar';
+
+// ============================================================
+// Dữ liệu địa hình
+// ============================================================
+const landmarks = [
+  {
+    name: "Đèo Ma Pì Lèng",
+    tag: "Tứ Đại Đỉnh Đèo",
+    tagColor: "bg-forest-green text-white",
+    elevation: "~1.200m",
+    desc:
+      "Ma Pì Lèng — tiếng H'Mông có nghĩa là 'Sống Mũi Ngựa' — là một trong bốn đại đỉnh đèo huyền thoại của Việt Nam (cùng Ô Quy Hồ, Khau Phạ, Pha Đin). Con đèo dài 20km uốn lượn trên vách đá dựng đứng bên sườn núi Mã Pí Lèng, nhìn xuống vực thẳm sông Nho Quế xanh biếc sâu hàng trăm mét. Đây là đoạn đường được coi là nguy hiểm và đẹp nhất trên Quốc lộ 4C.",
+    img: "/images/29.png",
+  },
+  {
+    name: "Hẻm Vực Tu Sản & Sông Nho Quế",
+    tag: "Sâu nhất Đông Nam Á",
+    tagColor: "bg-blue-700 text-white",
+    elevation: "~700m chiều sâu",
+    desc:
+      "Chạy dưới chân đèo Ma Pì Lèng, sông Nho Quế tạo ra hẻm vực Tu Sản — vực đá vôi sâu nhất Đông Nam Á với chiều sâu lên đến 700 mét so với mặt đường. Dòng nước màu xanh ngọc bích lấp lánh giữa hai vách đá dựng đứng, chỉ có thể tiếp cận bằng thuyền hoặc nhìn từ trên cao. Đây là điểm chụp ảnh ngoạn mục bậc nhất Hà Giang.",
+    img: "/images/30.png",
+  },
+  {
+    name: "Cao Nguyên Đá Đồng Văn",
+    tag: "UNESCO Global Geopark",
+    tagColor: "bg-green-700 text-white",
+    elevation: "900–1.600m",
+    desc:
+      "Được UNESCO công nhận là Công viên Địa chất Toàn cầu năm 2010, Cao nguyên Đá Đồng Văn trải rộng hơn 2.350 km² bao gồm 4 huyện Quản Bạ, Yên Minh, Đồng Văn và Mèo Vạc. Địa hình karst đá vôi hình thành từ 400–600 triệu năm trước, với những khối đá tai mèo nhọn hoắt trải dài bất tận tạo nên cảnh quan không nơi nào trên Trái đất có được.",
+    img: "/images/31.png",
+  },
+  {
+    name: "Thung Lũng & Các Điểm Nhìn",
+    tag: "Toàn cảnh đại ngàn",
+    tagColor: "bg-amber-700 text-white",
+    elevation: "Nhiều độ cao",
+    desc:
+      "Ngoài những điểm nổi tiếng, Mèo Vạc còn ẩn chứa vô số góc nhìn tuyệt đẹp: thung lũng Sủng Là với cánh đồng tam giác mạch rực hồng tháng 10, bản Pả Vi với ngôi nhà cổ trình tường trăm năm, hay đơn giản là một đoạn đường núi vắng người buổi sớm mai sương giăng — đó đã là thiên đường của người yêu thiên nhiên.",
+    img: "/images/32.png",
+  },
+];
+
+// ============================================================
+// Dữ liệu 4 mùa
+// ============================================================
+const seasons = [
+  {
+    season: "Mùa Xuân",
+    months: "Tháng 2 – 4",
+    temp: "12 – 20°C",
+    icon: "🌸",
+    highlight: "Hoa đào, lê trắng và tam giác mạch đầu mùa nở khắp sườn núi",
+    desc: "Đây là mùa đẹp nhất để ghé thăm các bản làng. Không khí trong lành, se lạnh nhẹ. Hoa đào đỏ thắm, hoa lê trắng tinh khôi và những cánh đồng tam giác mạch hồng đầu mùa tạo nên khung cảnh thiên đường. Người H'Mông trong trang phục rực rỡ đổ xuống chợ phiên — đây là thời điểm văn hóa sôi động nhất năm.",
+    bgColor: "bg-pink-50",
+    borderColor: "border-pink-200",
+    textColor: "text-pink-800",
+    recommend: true,
+  },
+  {
+    season: "Mùa Hè",
+    months: "Tháng 5 – 8",
+    temp: "20 – 28°C",
+    icon: "🌿",
+    highlight: "Ruộng bậc thang xanh mướt, thác nước đầy, không khí mát mẻ",
+    desc: "Dù là mùa mưa, Mèo Vạc không oi bức như miền xuôi nhờ độ cao trên 1.000m. Mưa thường đến nhanh và đi nhanh vào buổi chiều. Bù lại, núi rừng xanh tươi đến tuyệt vời — ruộng bậc thang trên sườn đá xanh mướt như nhung, suối thác đầy nước, không khí trong lành mát mẻ. Thích hợp cho những ai yêu thiên nhiên hoang dã.",
+    bgColor: "bg-green-50",
+    borderColor: "border-green-200",
+    textColor: "text-green-800",
+    recommend: false,
+  },
+  {
+    season: "Mùa Thu",
+    months: "Tháng 9 – 11",
+    temp: "15 – 24°C",
+    icon: "🌾",
+    highlight: "Mùa hoa tam giác mạch đẹp nhất & mùa gặt lúa nương vàng óng",
+    desc: "Tháng 10 – 11 là đỉnh điểm mùa hoa tam giác mạch — những cánh đồng trải dài một màu tím hồng mộng mơ giữa đá xám, tạo ra cảnh sắc độc nhất vô nhị không thể tìm thấy ở đâu trên đất Việt. Đây cũng là mùa gặt lúa nương, khi những thửa ruộng bậc thang chuyển vàng rực rỡ. Thời tiết mát mẻ, trời trong xanh — mùa lý tưởng nhất để du lịch.",
+    bgColor: "bg-amber-50",
+    borderColor: "border-amber-200",
+    textColor: "text-amber-800",
+    recommend: true,
+  },
+  {
+    season: "Mùa Đông",
+    months: "Tháng 12 – 1",
+    temp: "3 – 15°C",
+    icon: "❄️",
+    highlight: "Sương mù huyền ảo, đôi khi có băng giá & tuyết rơi hiếm hoi",
+    desc: "Mùa đông Mèo Vạc có thể rất lạnh, nhiệt độ đêm xuống dưới 5°C, đôi khi đến 0–2°C. Sương mù dày đặc bao phủ núi non tạo cảnh quan huyền ảo như cõi mộng. Những năm thời tiết đặc biệt lạnh, tuyết rơi mỏng trên đỉnh núi là khoảnh khắc hiếm hoi vô cùng quý giá. Du khách cần chuẩn bị áo ấm dày nhưng sẽ được trải nghiệm khung cảnh núi rừng đông giá cực kỳ ấn tượng.",
+    bgColor: "bg-blue-50",
+    borderColor: "border-blue-200",
+    textColor: "text-blue-800",
+    recommend: false,
+  },
+];
+
+// ============================================================
+// Lưu ý khi du lịch
+// ============================================================
+const travelTips = [
+  { icon: "👕", tip: "Luôn mang theo áo ấm, kể cả vào mùa hè — buổi tối vùng cao se lạnh bất ngờ." },
+  { icon: "🥾", tip: "Giày đế bám tốt là bắt buộc. Đá tai mèo rất sắc và trơn khi ướt." },
+  { icon: "🌞", tip: "Tia UV ở độ cao 1.000m+ rất mạnh. Kem chống nắng SPF 50+ và mũ rộng vành là cần thiết." },
+  { icon: "💧", tip: "Mang theo nước đầy đủ. Không phải điểm tham quan nào cũng có dịch vụ." },
+  { icon: "📱", tip: "Sóng điện thoại ở nhiều đoạn đèo và bản làng rất yếu hoặc mất sóng hoàn toàn." },
+  { icon: "⛽", tip: "Đổ đầy xăng tại thị trấn Mèo Vạc trước khi đi xa. Trạm xăng thưa thớt trên núi." },
+];
+
+export default function DiaHinhThoiTietPage() {
+  return (
+    <div className="bg-off-white min-h-screen font-sans">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="relative h-screen min-h-[560px] flex items-center justify-center text-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center hero-kenburns"
+          style={{ backgroundImage: "url('/images/28.png')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/75 via-forest-dark/30 to-forest-dark/90" />
+        <div className="relative z-10 px-6 max-w-3xl">
+          <p className="text-xs tracking-[0.4em] uppercase mb-4 opacity-80 font-light">Địa lý · Khí hậu · Cảnh quan</p>
+          <h2 className="text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-xl text-cream">
+            Vùng Đất Của Đá & Mây
+          </h2>
+          <p className="text-base md:text-lg font-light tracking-wide opacity-90 leading-relaxed">
+            Cao nguyên đá Đồng Văn — nơi những mỏm đá 500 triệu tuổi vươn lên giữa trời và mây, tạo nên cảnh quan địa chất độc nhất hành tinh.
+          </p>
+        </div>
+      </section>
+
+      {/* Tổng quan địa hình */}
+      <section className="max-w-4xl mx-auto py-20 px-6 text-center">
+        <h3 className="text-3xl font-serif text-forest-green mb-6">Địa Hình Mèo Vạc</h3>
+        <p className="text-gray-600 font-light leading-relaxed text-lg mb-4">
+          Mèo Vạc nằm trên Cao nguyên Đá Đồng Văn ở độ cao trung bình 900–1.600m so với mực nước biển. Địa hình chủ yếu là đá vôi karst với những vách núi dựng đứng, hẻm vực sâu thẳm và những thung lũng hẹp ẩn mình giữa bốn bề là đá tai mèo — loại đá có tuổi đời lên đến 400–600 triệu năm.
+        </p>
+        <p className="text-gray-600 font-light leading-relaxed text-lg">
+          Chính địa hình cực kỳ phức tạp và hiểm trở này đã vừa cô lập, vừa tôi luyện tinh thần kiên cường của người dân bản địa, đồng thời tạo nên vẻ đẹp hùng vĩ không nơi nào có thể sánh được.
+        </p>
+        <div className="grid grid-cols-3 gap-6 mt-12">
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
+            <p className="text-3xl font-serif font-bold text-forest-green mb-1">900–1.600m</p>
+            <p className="text-gray-500 text-sm font-light">Độ cao trung bình</p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
+            <p className="text-3xl font-serif font-bold text-forest-green mb-1">~700m</p>
+            <p className="text-gray-500 text-sm font-light">Chiều sâu hẻm vực Tu Sản</p>
+          </div>
+          <div className="bg-white rounded-2xl p-6 shadow-sm border border-gray-100 text-center">
+            <p className="text-3xl font-serif font-bold text-forest-green mb-1">2010</p>
+            <p className="text-gray-500 text-sm font-light">UNESCO Geopark</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Các điểm địa hình nổi bật */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <span className="text-forest-medium text-xs font-bold tracking-widest uppercase block mb-3">Kỳ quan thiên nhiên</span>
+            <h3 className="text-3xl font-serif text-forest-green mb-3">Những Điểm Đến Không Thể Bỏ Qua</h3>
+            <div className="w-16 h-0.5 bg-forest-medium mx-auto" />
+          </div>
+
+          <div className="space-y-20">
+            {landmarks.map((lm, i) => (
+              <div
+                key={lm.name}
+                className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}
+              >
+                <div className="w-full md:w-1/2 overflow-hidden rounded-2xl aspect-[4/3] shadow-lg relative">
+                  <span className={`absolute top-5 left-5 z-10 px-4 py-1.5 text-xs font-bold tracking-widest rounded-sm shadow ${lm.tagColor}`}>
+                    {lm.tag}
+                  </span>
+                  <img
+                    src={lm.img}
+                    alt={lm.name}
+                    className="w-full h-full object-cover hover:scale-105 transition duration-700"
+                  />
+                </div>
+                <div className="w-full md:w-1/2">
+                  <div className="text-forest-medium text-sm font-bold tracking-widest uppercase mb-2">Độ cao: {lm.elevation}</div>
+                  <h4 className="text-3xl font-serif text-forest-green mb-4">{lm.name}</h4>
+                  <p className="text-gray-600 font-light leading-relaxed">{lm.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Thời tiết 4 mùa */}
+      <section className="max-w-7xl mx-auto py-20 px-6">
+        <div className="text-center mb-14">
+          <span className="text-forest-medium text-xs font-bold tracking-widest uppercase block mb-3">Lịch du lịch</span>
+          <h3 className="text-3xl font-serif text-forest-green mb-3">Thời Tiết & Bốn Mùa Mèo Vạc</h3>
+          <div className="w-16 h-0.5 bg-forest-medium mx-auto" />
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {seasons.map((s) => (
+            <div
+              key={s.season}
+              className={`rounded-2xl p-8 border-2 ${s.bgColor} ${s.borderColor} relative overflow-hidden`}
+            >
+              {s.recommend && (
+                <span className="absolute top-4 right-4 bg-forest-medium text-white text-[10px] font-bold tracking-widest px-3 py-1 rounded-full">
+                  ✓ ĐỀ XUẤT
+                </span>
+              )}
+              <div className="flex items-center gap-4 mb-4">
+                <span className="text-4xl">{s.icon}</span>
+                <div>
+                  <h4 className={`text-xl font-serif font-bold ${s.textColor}`}>{s.season}</h4>
+                  <p className="text-gray-500 text-sm font-light">{s.months} · {s.temp}</p>
+                </div>
+              </div>
+              <p className={`text-sm font-bold mb-3 ${s.textColor}`}>{s.highlight}</p>
+              <p className="text-gray-600 font-light leading-relaxed text-sm">{s.desc}</p>
+            </div>
+          ))}
+        </div>
+
+        {/* Tóm tắt thời điểm lý tưởng */}
+        <div className="mt-12 bg-forest-green text-white rounded-2xl p-10 text-center">
+          <h4 className="text-2xl font-serif mb-4">Thời Điểm Lý Tưởng Nhất</h4>
+          <p className="font-light opacity-90 leading-relaxed max-w-3xl mx-auto">
+            <strong className="font-bold">Tháng 3 – 4:</strong> Hoa đào, hoa lê, tam giác mạch đầu mùa — thiên nhiên bừng sáng sau đông giá. &nbsp;·&nbsp;
+            <strong className="font-bold">Tháng 10 – 11:</strong> Hoa tam giác mạch tím hồng đẹp nhất năm, trời trong, thời tiết mát mẻ hoàn hảo.
+          </p>
+        </div>
+      </section>
+
+      {/* Lưu ý du lịch */}
+      <section className="bg-white py-20">
+        <div className="max-w-5xl mx-auto px-6">
+          <div className="text-center mb-12">
+            <h3 className="text-3xl font-serif text-forest-green mb-3">Lưu Ý Khi Du Lịch Mèo Vạc</h3>
+            <div className="w-16 h-0.5 bg-forest-medium mx-auto" />
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {travelTips.map((tip) => (
+              <div key={tip.tip} className="flex items-start gap-4 bg-off-white rounded-xl p-6 border border-gray-100">
+                <span className="text-2xl shrink-0">{tip.icon}</span>
+                <p className="text-gray-600 font-light text-sm leading-relaxed">{tip.tip}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-forest-green text-white py-16 text-center px-6">
+        <h3 className="text-2xl font-serif mb-4">Sẵn sàng chinh phục Mèo Vạc?</h3>
+        <p className="font-light opacity-90 max-w-2xl mx-auto mb-8 leading-relaxed">
+          TÂM BẢN Homestay là điểm dừng chân lý tưởng để bạn khám phá toàn bộ vẻ đẹp của huyện Mèo Vạc — từ đèo Ma Pì Lèng đến phiên chợ văn hóa cuối tuần.
+        </p>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a href="/#dat-phong" className="inline-block bg-white text-forest-green px-8 py-3 font-bold text-sm tracking-widest hover:bg-off-white transition-all duration-300 rounded-sm">
+            ĐẶT PHÒNG NGAY
+          </a>
+          <a href="/van-hoa" className="inline-block border border-white text-white px-8 py-3 font-bold text-sm tracking-widest hover:bg-white/10 transition-all duration-300 rounded-sm">
+            VĂN HÓA & CON NGƯỜI →
+          </a>
+        </div>
+      </section>
+
+      {/* Footer đơn giản */}
+      <footer className="bg-white border-t border-gray-100 py-8 text-center px-6">
+        <p className="text-gray-400 text-xs font-light">© 2025 TÂM BẢN Homestay · Mèo Vạc · Hà Giang</p>
+      </footer>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/HomePage.jsx">
+import React, { useState } from 'react';
+import { collection, addDoc } from 'firebase/firestore';
+import { db } from '../lib/firebase';
+import Navbar from '../components/Navbar';
+import Reveal from '../components/Reveal';
+
+// Section "Khám phá Mèo Vạc" — 4 điểm nhấn nội dung chính
+const exploreCards = [
+  {
+    href: '/van-hoa',
+    img: '/images/5.png',
+    tag: 'Di sản văn hóa',
+    title: 'Văn Hóa & Con Người',
+    desc: 'Người H\'Mông, Lô Lô, Giáy — nghề dệt lanh, nhuộm chàm, phiên chợ và lễ hội bản địa.',
+  },
+  {
+    href: '/am-thuc',
+    img: '/images/6.png',
+    tag: 'Ẩm thực bản địa',
+    title: 'Hương Vị Đá & Lửa',
+    desc: 'Mèn mén, thắng cố, gà đen H\'Mông, rượu ngô men lá — vị nguyên bản từ núi rừng.',
+  },
+  {
+    href: '/dia-hinh-thoi-tiet',
+    img: '/images/7.png',
+    tag: 'UNESCO Geopark',
+    title: 'Địa Hình & Thời Tiết',
+    desc: 'Đèo Ma Pì Lèng, hẻm vực Tu Sản, cao nguyên đá 500 triệu tuổi và 4 mùa đặc sắc.',
+  },
+  {
+    href: '/nhat-ky',
+    img: '/images/8.png',
+    tag: 'Nhật ký lữ khách',
+    title: 'Nhật Ký TÂM BẢN',
+    desc: 'Những mẩu chuyện nhỏ từ bản làng, ghi chép của người ở lại lâu hơn dự định.',
+  },
+];
+
+// ── BookingSection (tách riêng để dùng useState) ─────────────────────────
+function BookingSection() {
+  const [form, setForm] = useState({
+    name: '', phone: '', checkin: '', checkout: '', roomType: 'Phòng Riêng (400k/đêm)',
+    guests: '1', meals: [], note: '',
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
+
+  const MEALS = [
+    'Bữa sáng: Mèn mén & Canh tẩu chúa (50k/suất)',
+    'Bữa trưa: Mâm cơm bản tiêu chuẩn (150k/suất)',
+    "Bữa tối: Lẩu Gà Đen H'Mông (150k/suất)",
+  ];
+
+  const set = (key, val) => setForm(f => ({ ...f, [key]: val }));
+
+  const toggleMeal = (meal) => {
+    setForm(f => ({
+      ...f,
+      meals: f.meals.includes(meal) ? f.meals.filter(m => m !== meal) : [...f.meals, meal],
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setError('');
+    if (!form.name.trim() || !form.phone.trim()) {
+      setError('Vui lòng nhập họ tên và số điện thoại.');
+      return;
+    }
+    if (!form.checkin || !form.checkout) {
+      setError('Vui lòng chọn ngày nhận và ngày trả phòng.');
+      return;
+    }
+    if (form.checkin >= form.checkout) {
+      setError('Ngày trả phòng phải sau ngày nhận phòng.');
+      return;
+    }
+    setIsSubmitting(true);
+    try {
+      await addDoc(collection(db, 'bookings'), {
+        ...form,
+        status: 'new',
+        createdAt: Date.now(),
+        date: new Date().toLocaleDateString('vi-VN', { weekday: 'short', year: 'numeric', month: '2-digit', day: '2-digit' }),
+      });
+      setSubmitted(true);
+    } catch (err) {
+      console.error('Lỗi gửi đặt phòng:', err);
+      setError('Có lỗi xảy ra. Vui lòng thử lại hoặc liên hệ trực tiếp qua điện thoại.');
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
+  const inputCls = "w-full border-b border-gray-300 py-2 focus:outline-none focus:border-forest-green text-ink transition-colors bg-transparent";
+
+  return (
+    <section id="dat-phong" className="max-w-6xl mx-auto pb-24 px-6">
+      <div className="bg-white rounded-3xl shadow-xl overflow-hidden border border-gray-100 flex flex-col md:flex-row">
+
+        {/* Cột trái */}
+        <div className="bg-forest-green text-white p-10 md:p-14 md:w-2/5 flex flex-col justify-center relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white opacity-5 rounded-full -mr-20 -mt-20 pointer-events-none" />
+          <h3 className="text-3xl md:text-4xl font-serif mb-6 relative z-10">Lên lịch trình<br />của bạn</h3>
+          <p className="font-light opacity-90 mb-10 leading-relaxed relative z-10">
+            Hãy để TÂM BẢN chuẩn bị không gian nghỉ ngơi ấm áp và những mâm cơm bản địa nóng hổi chờ đón bạn sau chuyến đi dài.
+          </p>
+          <div className="space-y-4 font-light relative z-10">
+            <p className="flex items-center gap-3"><span className="text-xl">📍</span> Thôn Bản Máy, Mèo Vạc, Hà Giang</p>
+            <p className="flex items-center gap-3"><span className="text-xl">📞</span> 0987.xxx.xxx</p>
+          </div>
+        </div>
+
+        {/* Cột phải: Form */}
+        <div className="p-10 md:p-14 md:w-3/5">
+          {submitted ? (
+            <div className="flex flex-col items-center justify-center h-full text-center py-10">
+              <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-5">
+                <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7"/>
+                </svg>
+              </div>
+              <h4 className="text-2xl font-serif text-forest-green mb-3">Gửi thành công!</h4>
+              <p className="text-gray-500 font-light leading-relaxed max-w-sm">
+                TÂM BẢN đã nhận được yêu cầu của bạn. Chúng tôi sẽ liên hệ xác nhận trong vòng 24 giờ.
+              </p>
+              <button onClick={() => { setSubmitted(false); setForm({ name: '', phone: '', checkin: '', checkout: '', roomType: 'Phòng Riêng (400k/đêm)', guests: '1', meals: [], note: '' }); }}
+                className="mt-8 text-sm text-forest-medium font-bold underline underline-offset-4 hover:text-forest-green transition-colors">
+                Gửi yêu cầu khác
+              </button>
+            </div>
+          ) : (
+            <form onSubmit={handleSubmit} className="space-y-7" noValidate>
+              {error && (
+                <div className="flex items-start gap-2.5 bg-red-50 border border-red-200 text-red-700 text-sm px-4 py-3 rounded-xl">
+                  <svg className="w-4 h-4 mt-0.5 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7 4a1 1 0 11-2 0 1 1 0 012 0zm-1-9a1 1 0 00-1 1v4a1 1 0 102 0V6a1 1 0 00-1-1z" clipRule="evenodd"/>
+                  </svg>
+                  {error}
+                </div>
+              )}
+
+              {/* Name + Phone */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                <div>
+                  <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">Họ và tên *</label>
+                  <input type="text" required value={form.name} onChange={e => set('name', e.target.value)}
+                    placeholder="Nguyễn Văn A" className={inputCls} />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">Số điện thoại *</label>
+                  <input type="tel" required value={form.phone} onChange={e => set('phone', e.target.value)}
+                    placeholder="0912 345 678" className={inputCls} />
+                </div>
+              </div>
+
+              {/* Dates + Room */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <div>
+                  <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">Ngày nhận *</label>
+                  <input type="date" required value={form.checkin} onChange={e => set('checkin', e.target.value)}
+                    className={inputCls + ' cursor-pointer'} />
+                </div>
+                <div>
+                  <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">Ngày trả *</label>
+                  <input type="date" required value={form.checkout} onChange={e => set('checkout', e.target.value)}
+                    className={inputCls + ' cursor-pointer'} />
+                </div>
+                <div>
+                  {/* Nhãn & giới hạn đổi theo loại chỗ ở: Phòng Riêng tối đa 2 khách, Giường Dorm tính theo số giường */}
+                  <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">
+                    {form.roomType.startsWith('Phòng Riêng') ? 'Số khách' : 'Số giường'}
+                  </label>
+                  <select value={form.guests} onChange={e => set('guests', e.target.value)} className={inputCls + ' cursor-pointer'}>
+                    {(form.roomType.startsWith('Phòng Riêng') ? [1,2] : [1,2,3,4,5,6,7,8,9,10]).map(n => (
+                      <option key={n} value={n}>{n} {form.roomType.startsWith('Phòng Riêng') ? 'khách' : 'giường'}</option>
+                    ))}
+                  </select>
+                </div>
+              </div>
+
+              {/* Room type */}
+              <div>
+                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">Loại chỗ ở</label>
+                {/* Đổi loại sẽ reset số khách/giường về 1 để tránh vượt sức chứa */}
+                <select value={form.roomType} onChange={e => setForm(f => ({ ...f, roomType: e.target.value, guests: '1' }))} className={inputCls + ' cursor-pointer'}>
+                  <option>Phòng Riêng (400k/đêm)</option>
+                  <option>Giường Dorm (120k/giường)</option>
+                </select>
+                {/* Gợi ý gói giá để khách dễ hình dung — chọn bữa ăn bên dưới sẽ cộng vào */}
+                <p className="mt-2 text-[11px] text-gray-400 leading-relaxed">
+                  Phòng Riêng: 400k chỉ phòng · 450k kèm bữa sáng · 750k trọn 3 bữa bản địa. Giường Dorm: 120k/giường. Chọn bữa ăn bên dưới để cộng vào giá.
+                </p>
+              </div>
+
+              {/* Meals */}
+              <div>
+                <label className="block text-sm text-forest-green mb-4 uppercase tracking-widest font-bold">Đặt trước ẩm thực (Tùy chọn)</label>
+                <div className="space-y-3 bg-off-white p-5 rounded-xl border border-gray-100">
+                  {MEALS.map(meal => (
+                    <label key={meal} className="flex items-center gap-4 cursor-pointer group">
+                      <input type="checkbox" checked={form.meals.includes(meal)} onChange={() => toggleMeal(meal)}
+                        className="w-4 h-4 text-forest-green rounded accent-forest-green shrink-0" />
+                      <span className="text-gray-700 text-sm group-hover:text-forest-green transition-colors">{meal}</span>
+                    </label>
+                  ))}
+                </div>
+              </div>
+
+              {/* Note */}
+              <div>
+                <label className="block text-xs text-gray-500 mb-2 uppercase tracking-widest font-semibold">Ghi chú đặc biệt</label>
+                <textarea rows="2" value={form.note} onChange={e => set('note', e.target.value)}
+                  className="w-full border-b border-gray-300 py-2 focus:outline-none focus:border-forest-green resize-none text-ink placeholder-gray-400 bg-transparent"
+                  placeholder="Ví dụ: Tôi đi cùng trẻ em, tôi dị ứng với hành..." />
+              </div>
+
+              <button type="submit" disabled={isSubmitting}
+                className="w-full bg-forest-medium text-white font-bold tracking-widest py-4 rounded-sm hover:bg-[#1E5225] hover:shadow-lg disabled:opacity-70 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-3">
+                {isSubmitting ? (
+                  <>
+                    <svg className="w-5 h-5 animate-spin" fill="none" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"/>
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z"/>
+                    </svg>
+                    Đang gửi...
+                  </>
+                ) : 'GỬI YÊU CẦU ĐẶT PHÒNG'}
+              </button>
+            </form>
+          )}
+        </div>
+      </div>
+    </section>
+  );
+}
+
+
+export default function HomePage() {
+  return (
+    <div className="bg-off-white min-h-screen">
+      <Navbar />
+
+      {/* 1. Hero Section — full-bleed immersive */}
+      <section className="relative w-full overflow-hidden" style={{ height: '100svh', minHeight: 560 }}>
+        {/* Ảnh nền + phóng chậm (ken burns) */}
+        <div className="absolute inset-0 bg-cover bg-center hero-kenburns" style={{ backgroundImage: "url('/images/4.png')" }} />
+        {/* Lớp phủ gradient forest cho chữ nổi */}
+        <div className="absolute inset-0" style={{ background: 'linear-gradient(to bottom, rgba(30,82,37,0.55) 0%, rgba(30,82,37,0.22) 42%, rgba(30,82,37,0.85) 100%)' }} />
+
+        <div className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
+          <div className="reveal is-visible inline-flex items-center gap-2 px-4 py-1.5 rounded-full mb-6 bg-forest-medium/85 border border-white/25">
+            <span className="text-[11px] uppercase tracking-[0.2em] font-semibold text-white">UNESCO · Cao nguyên đá Đồng Văn</span>
+          </div>
+          <h1 className="font-serif font-bold text-cream drop-shadow-xl" style={{ fontSize: 'clamp(2.4rem, 7vw, 5.2rem)', lineHeight: 1.08, letterSpacing: '0.01em', maxWidth: 920 }}>
+            CHẠM VÀO<br /><span style={{ color: '#8FD89B' }}>TRÁI TIM CỦA ĐÁ</span>
+          </h1>
+          <p className="mt-6 max-w-xl font-light" style={{ color: 'rgba(251,247,236,0.92)', fontSize: 'clamp(0.95rem, 2vw, 1.15rem)', lineHeight: 1.7 }}>
+            Nghỉ ngơi giữa lòng đại ngàn H'Mông — nơi sự mộc mạc và tinh tế giao thoa, tại TÂM BẢN Homestay · Mèo Vạc · Hà Giang.
+          </p>
+          <div className="mt-9 flex flex-wrap items-center justify-center gap-4">
+            <a href="#dat-phong" className="px-8 py-3.5 rounded-full text-sm font-bold tracking-[0.05em] text-white bg-forest-medium hover:bg-forest-green hover:-translate-y-0.5 transition-all duration-200" style={{ boxShadow: '0 10px 30px -8px rgba(61,139,71,0.6)' }}>
+              ĐẶT PHÒNG NGAY
+            </a>
+            <a href="#kham-pha" className="px-8 py-3.5 rounded-full text-sm font-semibold tracking-[0.05em] text-cream border-[1.5px] border-white/60 hover:border-white hover:bg-white/10 transition-all duration-200">
+              KHÁM PHÁ MÈO VẠC
+            </a>
+          </div>
+        </div>
+
+        {/* Mũi tên cuộn xuống */}
+        <a href="#kham-pha" className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-cream/70 hover:text-cream transition-colors">
+          <span className="text-[10px] tracking-[0.3em] uppercase">Cuộn xuống</span>
+          <svg className="w-5 h-5 animate-bob" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+        </a>
+      </section>
+
+      {/* Stats bar — nền forest-dark, số lớn sống động */}
+      <section className="bg-forest-dark">
+        <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8">
+          {[
+            { v: 'UNESCO', l: 'Công viên địa chất toàn cầu' },
+            { v: '3 phòng', l: 'Phòng Riêng khép kín' },
+            { v: '20 giường', l: 'Dorm không giường tầng' },
+            { v: '10+', l: 'Dân tộc bản địa' },
+          ].map((s, i) => (
+            <Reveal key={s.l} delay={i * 100} className="text-center">
+              <div className="font-serif font-bold" style={{ color: '#8FD89B', fontSize: 'clamp(1.6rem, 4vw, 2.4rem)', letterSpacing: '0.03em' }}>{s.v}</div>
+              <div className="mt-1 text-sm font-light" style={{ color: 'rgba(251,247,236,0.78)' }}>{s.l}</div>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* 2. Section Khám phá Mèo Vạc */}
+      <section id="kham-pha" className="max-w-7xl mx-auto pt-24 pb-16 px-6">
+        <Reveal className="text-center mb-14">
+          <span className="text-forest-medium text-xs font-bold tracking-widest uppercase block mb-3">Huyện Mèo Vạc · Hà Giang</span>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold text-forest-green mb-4">Khám Phá Mèo Vạc</h3>
+          <p className="text-gray-500 font-light max-w-2xl mx-auto leading-relaxed">
+            Vùng đất cực bắc Hà Giang — nơi đá và mây, con người và thiên nhiên cùng viết nên câu chuyện của đại ngàn.
+          </p>
+          <div className="w-16 h-0.5 bg-forest-medium mx-auto mt-8" />
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {exploreCards.map((card, i) => (
+            <Reveal key={card.href} delay={i * 80} className="h-full">
+            <a
+              href={card.href}
+              className="lift group bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 flex flex-col h-full"
+            >
+              <div className="overflow-hidden aspect-[4/3] relative">
+                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500 z-10" />
+                <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-forest-green px-3 py-1 text-[10px] font-bold tracking-widest uppercase z-20 rounded-sm shadow-sm">
+                  {card.tag}
+                </span>
+                <img
+                  src={card.img}
+                  alt={card.title}
+                  className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <h4 className="text-lg font-serif text-forest-green mb-2 group-hover:text-forest-medium transition-colors">
+                  {card.title}
+                </h4>
+                <p className="text-gray-500 font-light text-sm leading-relaxed flex-grow">{card.desc}</p>
+                <div className="mt-4 pt-4 border-t border-gray-100 flex items-center justify-between">
+                  <span className="text-forest-medium text-xs font-bold tracking-widest uppercase">Khám phá</span>
+                  <span className="text-forest-medium text-sm">→</span>
+                </div>
+              </div>
+            </a>
+            </Reveal>
+          ))}
+        </div>
+      </section>
+
+      {/* Divider văn hóa — ảnh nền #9 + lớp phủ tối để chữ trắng dễ đọc */}
+      <section className="relative py-20 px-6 text-center text-white overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: "url('/images/9.png')" }} />
+        <div className="absolute inset-0 bg-forest-dark/75" />
+        <div className="relative z-10 max-w-4xl mx-auto">
+          <p className="text-lg md:text-xl font-serif italic leading-relaxed">
+            "Sống trên những mỏm đá tai mèo cằn cỗi quanh năm sương mù bao phủ, người Mèo Vạc đã đúc kết ra một nền văn hóa phi thường — giàu màu sắc, tinh tế trong nghệ thuật và bất khuất trong lao động."
+          </p>
+          <div className="w-10 h-0.5 bg-white/40 mx-auto mt-6" />
+        </div>
+      </section>
+
+      {/* 3. Danh Sách Bungalow */}
+      <section className="max-w-7xl mx-auto pt-24 pb-12 px-6">
+        <Reveal className="text-center mb-16">
+          <span className="text-forest-medium text-xs font-bold tracking-widest uppercase block mb-3">TÂM BẢN Homestay</span>
+          <h3 className="text-4xl md:text-5xl font-serif font-bold text-forest-green mb-4">Chốn Nghỉ Bình Yên</h3>
+          <div className="w-20 h-0.5 bg-forest-medium mx-auto" />
+        </Reveal>
+
+        <div className="grid md:grid-cols-2 gap-10 md:gap-16">
+          {/* Phòng Riêng */}
+          <a href="/bungalow" className="lift group cursor-pointer bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
+            <div className="overflow-hidden aspect-[4/3] relative">
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500 z-10" />
+              <img
+                src="/images/10.png"
+                alt="Phòng Riêng"
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+            <div className="p-8 text-center">
+              <h4 className="text-2xl font-serif text-forest-green mb-2">Phòng Riêng</h4>
+              <p className="text-gray-500 mb-6 font-light">Khép kín · tối đa 2 khách · chỉ 3 phòng</p>
+              <span className="text-forest-medium font-semibold text-lg tracking-wide border-b border-forest-medium pb-1">Từ 400.000 VNĐ / đêm</span>
+            </div>
+          </a>
+
+          {/* Giường Dorm */}
+          <a href="/bungalow" className="lift group cursor-pointer bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100">
+            <div className="overflow-hidden aspect-[4/3] relative">
+              <span className="absolute top-6 left-6 bg-forest-green/90 backdrop-blur-sm text-white px-4 py-2 text-xs tracking-widest uppercase z-20 shadow-md rounded-sm">
+                20 Giường Đơn
+              </span>
+              <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500 z-10" />
+              <img
+                src="/images/11.png"
+                alt="Giường Dorm"
+                className="w-full h-full object-cover group-hover:scale-110 transition duration-700"
+              />
+            </div>
+            <div className="p-8 text-center">
+              <h4 className="text-2xl font-serif text-forest-green mb-2">Giường Dorm</h4>
+              <p className="text-gray-500 mb-6 font-light">Phòng chung ấm áp · không giường tầng</p>
+              <span className="text-forest-medium font-semibold text-lg tracking-wide border-b border-forest-medium pb-1">120.000 VNĐ / giường</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* 4. Form Đặt Phòng */}
+      <BookingSection />
+
+      {/* 5. Footer */}
+      <footer className="bg-white border-t border-gray-100 pt-16 pb-8 px-8">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+          <div className="col-span-1 md:col-span-2">
+            <img src="/images/1.png" alt="TÂM BẢN Homestay" className="h-16 w-auto mb-3" />
+            <p className="text-forest-medium text-xs font-light tracking-widest uppercase mb-4">Mèo Vạc · Hà Giang</p>
+            <p className="text-gray-500 font-light leading-relaxed max-w-sm">
+              Homestay giữa lòng đại ngàn H'Mông — cửa ngõ để bạn khám phá văn hóa, con người và cảnh quan huyện Mèo Vạc.
+            </p>
+          </div>
+          <div>
+            <h4 className="text-sm font-bold text-gray-800 uppercase tracking-widest mb-6">Liên hệ</h4>
+            <ul className="text-gray-500 font-light space-y-3 text-sm">
+              <li>📍 Thôn Bản Máy, Mèo Vạc, Hà Giang</li>
+              <li>📞 090 xxx xxxx</li>
+              <li>✉️ hello@tamban.vn</li>
+            </ul>
+          </div>
+          <div>
+            <h4 className="text-sm font-bold text-gray-800 uppercase tracking-widest mb-6">Khám phá</h4>
+            <ul className="text-gray-500 font-light space-y-3 text-sm">
+              <li><a href="/van-hoa" className="hover:text-forest-green transition-colors">Văn hóa & Con người</a></li>
+              <li><a href="/am-thuc" className="hover:text-forest-green transition-colors">Ẩm thực</a></li>
+              <li><a href="/dia-hinh-thoi-tiet" className="hover:text-forest-green transition-colors">Địa hình & Thời tiết</a></li>
+              <li><a href="/nhat-ky" className="hover:text-forest-green transition-colors">Nhật ký TÂM BẢN</a></li>
+              <li><a href="/bungalow" className="hover:text-forest-green transition-colors">Phòng & Giường</a></li>
+              <li>
+                <a href="/admin/login" className="text-gray-300 hover:text-forest-green flex items-center gap-2 transition-colors">
+                  <span className="text-[10px]">●</span> Quản trị viên
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="border-t border-gray-50 pt-8 text-center">
+          <p className="text-gray-400 text-xs font-light">© 2025 TÂM BẢN Homestay · Mèo Vạc · Hà Giang. All rights reserved.</p>
+        </div>
+      </footer>
+
+      {/* Nút Zalo */}
+      <div className="fixed bottom-8 right-8 z-50">
+        <button suppressHydrationWarning title="Chat Zalo" className="w-16 h-16 bg-blue-600 rounded-full shadow-2xl flex items-center justify-center text-white font-bold text-2xl hover:-translate-y-2 hover:shadow-blue-500/50 transition-all duration-300">
+          Z
+        </button>
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/NhatKyPage.jsx">
+import React, { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
+import { collection, getDocs, orderBy, query } from 'firebase/firestore';
+import Navbar from '../components/Navbar';
+import { db } from '../lib/firebase';
+
+function SkeletonCard() {
+  return (
+    <div className="bg-white rounded-xl overflow-hidden border border-gray-100 flex flex-col">
+      <div className="aspect-[4/3] bg-gray-200 animate-pulse" />
+      <div className="p-6 space-y-3 flex-grow">
+        <div className="h-3 bg-gray-200 rounded animate-pulse w-1/3" />
+        <div className="h-5 bg-gray-200 rounded animate-pulse w-5/6" />
+        <div className="h-5 bg-gray-200 rounded animate-pulse w-4/6" />
+        <div className="space-y-2 pt-2">
+          <div className="h-3 bg-gray-100 rounded animate-pulse" />
+          <div className="h-3 bg-gray-100 rounded animate-pulse w-4/5" />
+        </div>
+      </div>
+      <div className="px-6 pb-6 pt-2 border-t border-gray-100">
+        <div className="h-3 bg-gray-200 rounded animate-pulse w-20" />
+      </div>
+    </div>
+  );
+}
+
+function stripHtml(html) {
+  if (!html) return '';
+  return html.replace(/<[^>]*>/g, '').replace(/\s+/g, ' ').trim();
+}
+
+export default function NhatKyPage() {
+  const [posts, setPosts] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState(false);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const q = query(collection(db, 'posts'), orderBy('createdAt', 'desc'));
+        const snap = await getDocs(q);
+        setPosts(snap.docs.map(d => ({ id: d.id, ...d.data() })));
+      } catch (err) {
+        console.error('Lỗi tải bài viết:', err);
+        setError(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchPosts();
+  }, []);
+
+  return (
+    <div className="bg-off-white min-h-screen font-sans">
+      <Navbar />
+
+      <section className="relative min-h-[60vh] flex items-center justify-center bg-forest-dark text-white text-center overflow-hidden">
+        <div className="absolute inset-0 bg-cover bg-center hero-kenburns opacity-50"
+          style={{ backgroundImage: "url('/images/33.png')" }} />
+        <div className="relative z-10 px-4">
+          <h2 className="text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-xl text-cream">Nhật ký TÂM BẢN</h2>
+          <p className="font-light tracking-widest uppercase text-sm md:text-base opacity-90">Nơi lưu giữ những mẩu chuyện nhỏ giữa đại ngàn</p>
+        </div>
+      </section>
+
+      <section className="max-w-7xl mx-auto py-20 px-6">
+        {error && (
+          <div className="text-center py-20">
+            <svg className="w-14 h-14 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/>
+            </svg>
+            <p className="text-gray-500 font-medium">Không thể tải bài viết. Vui lòng kiểm tra kết nối mạng.</p>
+          </div>
+        )}
+
+        {isLoading && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {Array.from({ length: 6 }).map((_, i) => <SkeletonCard key={i} />)}
+          </div>
+        )}
+
+        {!isLoading && !error && posts.length === 0 && (
+          <div className="text-center py-24">
+            <svg className="w-16 h-16 text-gray-200 mx-auto mb-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+            </svg>
+            <p className="text-gray-500 font-serif text-xl italic">Chưa có mẩu chuyện nào được kể...</p>
+            <p className="text-gray-400 text-sm mt-2">Hãy quay lại sau nhé!</p>
+          </div>
+        )}
+
+        {!isLoading && !error && posts.length > 0 && (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {posts.map(post => (
+              <Link key={post.id} to={`/nhat-ky/${post.id}`}
+                className="lift bg-white rounded-xl shadow-sm overflow-hidden border border-gray-100 group flex flex-col">
+                <div className="overflow-hidden aspect-[4/3] relative">
+                  <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500 z-10" />
+                  <img
+                    src={post.imageUrl || '/images/34.png'}
+                    alt={post.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                    loading="lazy"
+                  />
+                  <span className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-forest-green px-3 py-1 text-xs font-bold tracking-widest uppercase z-20 rounded-sm shadow-sm">
+                    {post.tag}
+                  </span>
+                </div>
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-gray-400 text-xs font-light mb-2.5 block">{post.date}</span>
+                  <h3 className="text-xl font-serif text-forest-green mb-3 group-hover:text-forest-medium transition-colors line-clamp-2 leading-snug">
+                    {post.title}
+                  </h3>
+                  <p className="text-gray-500 text-sm font-light leading-relaxed line-clamp-3 flex-grow">
+                    {stripHtml(post.content).substring(0, 120) || 'Đang cập nhật nội dung...'}
+                    {stripHtml(post.content).length > 120 ? '...' : ''}
+                  </p>
+                </div>
+                <div className="px-6 pb-5 pt-3 border-t border-gray-100 flex items-center justify-between">
+                  <span className="text-forest-medium text-xs font-bold tracking-widest uppercase">Đọc tiếp</span>
+                  <svg className="w-4 h-4 text-forest-medium group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                  </svg>
+                </div>
+              </Link>
+            ))}
+          </div>
+        )}
+      </section>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/PostDetailPage.jsx">
+import React, { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
+import { doc, getDoc } from 'firebase/firestore';
+import Navbar from '../components/Navbar';
+import { db } from '../lib/firebase';
+
+function PostSkeleton() {
+  return (
+    <div className="bg-off-white min-h-screen font-sans animate-pulse">
+      <Navbar />
+      {/* Hero skeleton */}
+      <div className="h-[55vh] bg-gray-300" />
+      {/* Content skeleton */}
+      <div className="max-w-3xl mx-auto py-20 px-6 space-y-4">
+        {[100, 90, 75, 85, 60].map((w, i) => (
+          <div key={i} className={`h-4 bg-gray-200 rounded`} style={{ width: `${w}%` }} />
+        ))}
+        <div className="h-60 bg-gray-200 rounded-2xl mt-8" />
+        {[80, 70, 90, 55].map((w, i) => (
+          <div key={i} className={`h-4 bg-gray-200 rounded`} style={{ width: `${w}%` }} />
+        ))}
+      </div>
+    </div>
+  );
+}
+
+export default function PostDetailPage() {
+  const { id: postId } = useParams();
+  const navigate = useNavigate();
+  const [post, setPost] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [notFound, setNotFound] = useState(false);
+
+  useEffect(() => {
+    const fetchPost = async () => {
+      try {
+        const snap = await getDoc(doc(db, 'posts', postId));
+        if (snap.exists()) {
+          setPost({ id: snap.id, ...snap.data() });
+        } else {
+          setNotFound(true);
+        }
+      } catch (err) {
+        console.error('Lỗi tải bài viết:', err);
+        setNotFound(true);
+      } finally {
+        setIsLoading(false);
+      }
+    };
+    fetchPost();
+  }, [postId]);
+
+  if (isLoading) return <PostSkeleton />;
+
+  if (notFound) {
+    return (
+      <div className="bg-off-white min-h-screen font-sans">
+        <Navbar />
+        <div className="min-h-[60vh] flex flex-col items-center justify-center text-center px-6">
+          <svg className="w-16 h-16 text-gray-200 mb-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          <h2 className="text-2xl font-serif text-forest-green mb-3">Bài viết không tồn tại</h2>
+          <p className="text-gray-500 text-sm mb-7 max-w-sm">Mẩu chuyện này có thể đã được gỡ xuống hoặc chưa từng được đăng tải.</p>
+          <button
+            onClick={() => navigate('/nhat-ky')}
+            className="inline-flex items-center gap-2 bg-forest-green text-white px-6 py-3 rounded-xl text-sm font-bold hover:bg-[#1E5225] transition-all"
+          >
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
+            </svg>
+            Trở về Nhật ký
+          </button>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="bg-off-white min-h-screen font-sans">
+      <Navbar />
+
+      {/* Hero image */}
+      <section className="relative h-[55vh] md:h-[65vh] flex items-end justify-center pb-14">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: `url('${post.imageUrl || "/images/34.png"}')` }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+        <div className="relative z-10 text-center max-w-4xl px-6">
+          <span className="bg-white/20 backdrop-blur-md text-white px-4 py-1.5 text-xs font-bold tracking-widest uppercase rounded-sm mb-5 inline-block">
+            {post.tag}
+          </span>
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif text-white mb-5 drop-shadow-md leading-tight">
+            {post.title}
+          </h2>
+          <p className="text-gray-300 font-light tracking-widest text-sm">{post.date}</p>
+        </div>
+      </section>
+
+      {/* Back button */}
+      <div className="max-w-3xl mx-auto px-6 pt-8">
+        <button
+          onClick={() => navigate('/nhat-ky')}
+          className="inline-flex items-center gap-2 text-sm text-forest-medium hover:text-forest-green font-bold transition-colors"
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7"/>
+          </svg>
+          Trở về Nhật ký
+        </button>
+      </div>
+
+      {/* Article */}
+      <article className="max-w-3xl mx-auto py-10 px-6 md:px-8">
+        <div
+          className="prose prose-stone md:prose-lg max-w-none prose-img:rounded-2xl prose-img:shadow-xl prose-headings:font-serif prose-headings:text-forest-green prose-a:text-forest-medium prose-a:no-underline hover:prose-a:underline"
+          dangerouslySetInnerHTML={{ __html: post.content }}
+        />
+
+        {/* Author */}
+        <div className="mt-16 pt-8 border-t border-gray-200 flex items-center gap-5">
+          <div className="w-14 h-14 rounded-full bg-forest-green text-white flex items-center justify-center font-serif text-2xl italic shrink-0">T</div>
+          <div>
+            <p className="font-bold text-forest-green text-sm tracking-widest uppercase">Chủ nhà TÂM BẢN</p>
+            <p className="text-gray-400 text-sm font-light">Người kể chuyện từ Mèo Vạc, Hà Giang</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  );
+}
+</file>
+
+<file path="src/pages/VanHoaPage.jsx">
+import React from 'react';
+import Navbar from '../components/Navbar';
+
+// ============================================================
+// Dữ liệu dân tộc tại Mèo Vạc
+// ============================================================
+const ethnicGroups = [
+  {
+    name: "Người H'Mông",
+    pct: "~70%",
+    color: "bg-forest-light text-forest-green",
+    desc:
+      "Chủ nhân của những mỏm đá tai mèo, người H'Mông mang trên mình trang phục thêu tay rực rỡ nhất vùng Đông Bắc. Phụ nữ H'Mông có thể mất 5–7 năm để hoàn thiện một bộ váy thêu cho ngày cưới. Họ sống trong các ngôi nhà trình tường đất, canh tác ngô trên hốc đá và là cộng đồng gìn giữ nghi lễ khèn bè lâu đời nhất.",
+    img: "/images/20.png",
+  },
+  {
+    name: "Người Lô Lô",
+    pct: "~8%",
+    color: "bg-red-50 text-red-700",
+    desc:
+      "Định cư lâu đời ở Lũng Cú và Mèo Vạc, người Lô Lô nổi tiếng với nghệ thuật ghép vải nhiều màu sắc và nghi lễ đánh trống đồng linh thiêng. Họ lưu giữ truyền thống cúng tổ tiên bằng tiếng Lô Lô cổ và là chủ nhân của những điệu múa trống đồng chỉ xuất hiện trong các nghi lễ năm mới.",
+    img: "/images/21.png",
+  },
+  {
+    name: "Người Giáy",
+    pct: "~7%",
+    color: "bg-amber-50 text-amber-800",
+    desc:
+      "Người Giáy thường định cư ở các thung lũng ven sông Nho Quế, nơi điều kiện canh tác lúa nước thuận lợi hơn. Họ nổi tiếng với nghề dệt lụa thủ công và ẩm thực tinh tế, đặc biệt là các món chế biến từ cá sông và rau rừng. Trang phục phụ nữ Giáy có đặc trưng bởi họa tiết hoa văn hình học tinh xảo.",
+    img: "/images/22.png",
+  },
+  {
+    name: "Người Tày & Dân tộc khác",
+    pct: "~15%",
+    color: "bg-green-50 text-green-800",
+    desc:
+      "Người Tày mang đến Mèo Vạc kho tàng dân ca phong phú và kiến trúc nhà sàn độc đáo. Cùng với các dân tộc Dao, Hán, Nùng… họ tạo nên bức tranh đa sắc màu văn hóa, nơi tiếng nói, trang phục và phong tục tập quán của hơn chục dân tộc cùng tồn tại và giao thoa hàng thế kỷ.",
+    img: "/images/23.png",
+  },
+];
+
+// ============================================================
+// Dữ liệu nghề lao động truyền thống
+// ============================================================
+const crafts = [
+  {
+    icon: "🌾",
+    title: "Canh tác đá — Sức sống trên đá tai mèo",
+    desc:
+      "Hàng trăm năm qua, người H'Mông đã dùng đôi tay trần bóc từng tảng đá, đổ đất màu từ vùng thấp lên tạo thành những ô đất nhỏ trên sườn núi dốc đứng. Trong mỗi hốc đá tưởng như chỉ có thể nuôi rêu xanh đó, họ trồng ngô, đậu, mạch đen. Đây là biểu tượng mạnh mẽ nhất của tinh thần chinh phục thiên nhiên.",
+    img: "/images/24.png",
+  },
+  {
+    icon: "🧵",
+    title: "Dệt lanh — Câu chuyện của từng sợi chỉ",
+    desc:
+      "Nghề dệt lanh là linh hồn của người phụ nữ H'Mông. Từ cây lanh trồng trên nương, họ tự tay thu hoạch, tước vỏ, xe sợi trên xa quay gỗ đến khi thành tấm vải thô. Tấm vải được nhuộm chàm, vẽ sáp ong tạo hoa văn rồi thêu thêm bằng chỉ màu. Mỗi bộ váy lanh hoàn chỉnh là tác phẩm nghệ thuật mất vài tháng đến vài năm.",
+    img: "/images/25.png",
+  },
+  {
+    icon: "🫙",
+    title: "Nhuộm chàm — Màu xanh của đại ngàn",
+    desc:
+      "Cây chàm được trồng trên rẫy, thu hoạch rồi ủ lên men trong chum nước lớn để tạo thành thuốc nhuộm. Người phụ nữ H'Mông nhúng vải lanh vào chum chàm nhiều lần, phơi khô rồi lại nhúng — lặp đi lặp lại đến khi vải chuyển sang màu xanh đen đặc trưng, bóng mượt và bền màu theo năm tháng. Kỹ thuật nhuộm chàm là bí quyết gia truyền.",
+    img: "/images/26.png",
+  },
+  {
+    icon: "🛒",
+    title: "Chợ phiên Mèo Vạc — Nơi văn hóa gặp gỡ",
+    desc:
+      "Phiên chợ Mèo Vạc họp vào mỗi sáng Chủ Nhật là sự kiện văn hóa lớn nhất vùng. Từ tờ mờ sáng, người dân các bản làng đeo gùi đi bộ hàng giờ xuống núi để mua bán, gặp gỡ bạn bè. Sắc màu váy thêu rực rỡ, tiếng khèn, tiếng nói nhiều thứ tiếng, mùi thắng cố nghi ngút, sản phẩm thủ công bày trên mặt đất — đó là phiên chợ không thể lẫn lộn.",
+    img: "/images/27.png",
+  },
+];
+
+// ============================================================
+// Lễ hội
+// ============================================================
+const festivals = [
+  {
+    name: "Tết Nào Pê Chầu",
+    time: "Tháng Chạp âm lịch",
+    desc: "Tết cổ truyền của người H'Mông diễn ra trước Tết Nguyên Đán 1 tháng. Đây là thời điểm các gia đình sum vầy, cúng tổ tiên, giã bánh dày và tổ chức hội thi bắn nỏ, đánh cù, ném còn.",
+  },
+  {
+    name: "Hội Gầu Tào",
+    time: "Mùng 2–4 Tết Nguyên Đán",
+    desc: "Lễ hội xuống núi lớn nhất của người H'Mông, tổ chức để tạ ơn thần linh và cầu mong sức khỏe, mùa màng tươi tốt. Nét đặc sắc là màn biểu diễn khèn bè, múa ô và hát giao duyên.",
+  },
+  {
+    name: "Chợ Tình Khâu Vai",
+    time: "27 tháng 3 âm lịch",
+    desc: "Phiên chợ tình huyền thoại diễn ra một lần mỗi năm — nơi những đôi lứa không thành duyên gặp lại nhau để tâm tình. Ngày nay, chợ Khâu Vai là sự kiện du lịch văn hóa đặc sắc thu hút hàng nghìn du khách.",
+  },
+  {
+    name: "Lễ Cúng Thần Rừng",
+    time: "Đầu tháng 2 âm lịch",
+    desc: "Người Lô Lô và một số nhóm H'Mông tổ chức lễ cúng rừng thiêng đầu năm, cầu cho rừng núi bình an, mưa thuận gió hòa. Đây là nghi lễ thể hiện mối quan hệ gắn bó sâu sắc giữa con người và thiên nhiên vùng cao.",
+  },
+];
+
+export default function VanHoaPage() {
+  return (
+    <div className="bg-off-white min-h-screen font-sans">
+      <Navbar />
+
+      {/* Hero */}
+      <section className="relative h-screen min-h-[560px] flex items-center justify-center text-center text-white overflow-hidden">
+        <div
+          className="absolute inset-0 bg-cover bg-center hero-kenburns"
+          style={{ backgroundImage: "url('/images/19.png')" }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-forest-dark/75 via-forest-dark/30 to-forest-dark/90" />
+        <div className="relative z-10 px-6 max-w-3xl">
+          <p className="text-xs tracking-[0.4em] uppercase mb-4 opacity-80 font-light">Mèo Vạc · Hà Giang</p>
+          <h2 className="text-5xl md:text-7xl font-serif font-bold mb-6 drop-shadow-xl text-cream">
+            Con Người Của Đá
+          </h2>
+          <p className="text-base md:text-lg font-light tracking-wide opacity-90 leading-relaxed">
+            Nơi hơn chục dân tộc anh em cùng viết nên câu chuyện về sức sống, sắc màu và bản lĩnh con người vùng cao.
+          </p>
+        </div>
+      </section>
+
+      {/* Lời giới thiệu */}
+      <section className="max-w-4xl mx-auto py-20 px-6 text-center">
+        <h3 className="text-3xl font-serif text-forest-green mb-6">Mèo Vạc — Nơi Sắc Tộc Giao Thoa</h3>
+        <p className="text-gray-600 font-light leading-relaxed text-lg mb-6">
+          Nằm ở cực bắc của Hà Giang, huyện Mèo Vạc là vùng đất biên giới nơi hơn 18 dân tộc anh em cùng sinh sống trên những mỏm đá tai mèo cằn cỗi. Trong điều kiện thiên nhiên khắc nghiệt, người dân nơi đây đã đúc kết một nền văn hóa phi thường — giàu màu sắc, tinh tế trong nghệ thuật và bất khuất trong lao động.
+        </p>
+        <p className="text-gray-600 font-light leading-relaxed text-lg">
+          Mỗi bộ váy thêu, mỗi chum rượu ngô, mỗi tiếng khèn vang lên giữa đại ngàn là một trang sử sống của vùng đất này.
+        </p>
+        <div className="w-16 h-0.5 bg-forest-medium mx-auto mt-10" />
+      </section>
+
+      {/* Các dân tộc */}
+      <section className="max-w-7xl mx-auto pb-20 px-6">
+        <div className="text-center mb-14">
+          <h3 className="text-3xl font-serif text-forest-green mb-3">Những Dân Tộc Làm Nên Mèo Vạc</h3>
+          <div className="w-16 h-0.5 bg-forest-medium mx-auto" />
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-10">
+          {ethnicGroups.map((group) => (
+            <div key={group.name} className="lift bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 group">
+              <div className="overflow-hidden aspect-[16/9]">
+                <img
+                  src={group.img}
+                  alt={group.name}
+                  className="w-full h-full object-cover group-hover:scale-105 transition duration-700"
+                />
+              </div>
+              <div className="p-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <h4 className="text-2xl font-serif text-forest-green">{group.name}</h4>
+                  <span className={`text-xs font-bold tracking-widest px-3 py-1 rounded-full ${group.color}`}>
+                    {group.pct}
+                  </span>
+                </div>
+                <p className="text-gray-600 font-light leading-relaxed">{group.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Con người & Lao động */}
+      <section className="bg-white py-20">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="text-center mb-14">
+            <span className="text-forest-medium text-xs font-bold tracking-widest uppercase block mb-3">Di sản phi vật thể</span>
+            <h3 className="text-3xl font-serif text-forest-green mb-3">Nghề Truyền Thống & Lao Động</h3>
+            <div className="w-16 h-0.5 bg-forest-medium mx-auto" />
+          </div>
+
+          <div className="space-y-20">
+            {crafts.map((craft, i) => (
+              <div
+                key={craft.title}
+                className={`flex flex-col ${i % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} items-center gap-12`}
+              >
+                <div className="w-full md:w-1/2 overflow-hidden rounded-2xl aspect-[4/3] shadow-lg">
+                  <img
+                    src={craft.img}
+                    alt={craft.title}
+                    className="w-full h-full object-cover hover:scale-105 transition duration-700"
+                  />
+                </div>
+                <div className="w-full md:w-1/2">
+                  <span className="text-3xl mb-4 block">{craft.icon}</span>
+                  <h4 className="text-2xl font-serif text-forest-green mb-4">{craft.title}</h4>
+                  <p className="text-gray-600 font-light leading-relaxed">{craft.desc}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Lễ hội */}
+      <section className="max-w-6xl mx-auto py-20 px-6">
+        <div className="text-center mb-14">
+          <span className="text-forest-medium text-xs font-bold tracking-widest uppercase block mb-3">Nhịp sống văn hóa</span>
+          <h3 className="text-3xl font-serif text-forest-green mb-3">Lễ Hội & Nghi Lễ</h3>
+          <div className="w-16 h-0.5 bg-forest-medium mx-auto" />
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-8">
+          {festivals.map((fest) => (
+            <div key={fest.name} className="bg-white rounded-2xl p-8 shadow-sm border border-gray-100 hover:shadow-lg transition-all duration-300">
+              <div className="flex items-start justify-between mb-4">
+                <h4 className="text-xl font-serif text-forest-green">{fest.name}</h4>
+                <span className="text-forest-medium text-xs font-bold tracking-wide bg-amber-50 px-3 py-1.5 rounded-full shrink-0 ml-4 text-center leading-tight">
+                  {fest.time}
+                </span>
+              </div>
+              <p className="text-gray-600 font-light leading-relaxed">{fest.desc}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="bg-forest-green text-white py-16 text-center px-6">
+        <h3 className="text-2xl font-serif mb-4">Trải nghiệm văn hóa tại TÂM BẢN</h3>
+        <p className="font-light opacity-90 max-w-2xl mx-auto mb-8 leading-relaxed">
+          Chúng tôi có thể sắp xếp cho bạn những buổi tham quan bản làng, tham dự phiên chợ phiên và giao lưu văn nghệ cùng bà con dân tộc ngay trong chuyến lưu trú.
+        </p>
+        <div className="flex flex-wrap gap-4 justify-center">
+          <a href="/#dat-phong" className="inline-block bg-white text-forest-green px-8 py-3 font-bold text-sm tracking-widest hover:bg-off-white transition-all duration-300 rounded-sm">
+            ĐẶT PHÒNG NGAY
+          </a>
+          <a href="/dia-hinh-thoi-tiet" className="inline-block border border-white text-white px-8 py-3 font-bold text-sm tracking-widest hover:bg-white/10 transition-all duration-300 rounded-sm">
+            ĐỊA HÌNH & THỜI TIẾT →
+          </a>
+        </div>
+      </section>
+
+      {/* Footer đơn giản */}
+      <footer className="bg-white border-t border-gray-100 py-8 text-center px-6">
+        <p className="text-gray-400 text-xs font-light">© 2025 TÂM BẢN Homestay · Mèo Vạc · Hà Giang</p>
+      </footer>
+    </div>
+  );
+}
+</file>
+
+<file path="src/styles/globals.css">
+@import "tailwindcss";
+
+/* ===== BRAND BE ABLE VN — Forest Green (Brand Guideline v1.0) ===== */
+@theme {
+  --color-forest-green: #2B6830;   /* Chủ đạo */
+  --color-forest-dark: #1E5225;    /* Section/banner/footer, highlight đậm */
+  --color-forest-medium: #3D8B47;  /* Accent: hover, badge, divider */
+  --color-forest-light: #E8F4EC;   /* Nền card sáng */
+  --color-off-white: #F2F8F4;      /* Nền trang */
+  --color-ink: #2C2C2C;            /* Text chính */
+  --color-cream: #FBF7EC;          /* Chữ ấm trên nền tối (immersive) */
+
+  --font-sans: "Be Vietnam Pro", sans-serif;
+  --font-serif: "Be Vietnam Pro", sans-serif;
+}
+
+/* ===== IMMERSIVE — "tràn & sống động" ===== */
+html { scroll-behavior: smooth; }
+body { background: #F2F8F4; color: #2C2C2C; }
+
+/* Hiện dần khi cuộn tới (dùng với component Reveal) */
+@keyframes fadeUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: none; } }
+.reveal { opacity: 0; }
+.reveal.is-visible { animation: fadeUp 0.75s cubic-bezier(0.22, 0.61, 0.36, 1) forwards; }
+
+/* Ken Burns: ảnh hero phóng chậm cho sống động */
+@keyframes kenburns { from { transform: scale(1.02); } to { transform: scale(1.14); } }
+.hero-kenburns { animation: kenburns 20s ease-out forwards; }
+
+/* Mũi tên cuộn nhấp nhô */
+@keyframes bob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+.animate-bob { animation: bob 1.8s ease-in-out infinite; }
+
+/* Card nâng khi hover */
+.lift { transition: transform 0.35s cubic-bezier(0.22,0.61,0.36,1), box-shadow 0.35s ease; }
+.lift:hover { transform: translateY(-6px); box-shadow: 0 18px 40px -12px rgba(30,82,37,0.35); }
+
+/* Tôn trọng người tắt hiệu ứng */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .reveal, .reveal.is-visible, .hero-kenburns, .animate-bob { animation: none !important; opacity: 1 !important; transform: none !important; }
+}
+</file>
+
+<file path="tailwind.config.js">
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+  ],
+  theme: {
+    extend: {
+      // Palette Be Able VN — Forest Green (đồng bộ với @theme trong globals.css)
+      colors: {
+        'forest-green': '#2B6830',  // Chủ đạo
+        'forest-dark': '#1E5225',   // Section/footer/đậm
+        'forest-medium': '#3D8B47', // Accent, hover, badge
+        'forest-light': '#E8F4EC',  // Nền card nhạt
+        'off-white': '#F2F8F4',     // Nền trang
+        'ink': '#2C2C2C',           // Text chính
+      },
+      fontFamily: {
+        serif: ['Be Vietnam Pro', 'sans-serif'],
+        sans: ['Be Vietnam Pro', 'sans-serif'],
+      }
+    },
+  },
+  plugins: [
+    require('@tailwindcss/typography'),
+  ],
+};
+</file>
+
+<file path="vite.config.js">
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
+import tailwindcss from '@tailwindcss/vite';
+
+export default defineConfig({
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
+});
+</file>
+
+</files>

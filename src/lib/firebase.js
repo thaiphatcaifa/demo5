@@ -1,27 +1,29 @@
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 
-// =============================================================
-//  BUỔI 5 — DÁN CẤU HÌNH FIREBASE CỦA RIÊNG BẠN VÀO ĐÂY
-// -------------------------------------------------------------
-//  Đây là phần TRỐNG. Mỗi thầy/cô sẽ tự tạo một dự án Firebase
-//  riêng (xem file SETUP-FIREBASE.md), rồi COPY khối "firebaseConfig"
-//  mà Firebase cấp cho mình và DÁN ĐÈ vào khối bên dưới.
+// ====================================================================
+//  HƯỚNG DẪN THIẾT LẬP CẤU HÌNH FIREBASE CỦA RIÊNG BẠN
+// --------------------------------------------------------------------
+//  Hãy thay thế toàn bộ các chuỗi giữ chỗ "DÁN_..." bằng các giá trị 
+//  thực tế được cấp từ Firebase Console của bạn.
 //
-//  Lấy ở đâu: Firebase Console -> ⚙️ Project settings -> mục
-//  "Your apps" -> chọn app Web (</>) -> copy đoạn const firebaseConfig.
-// =============================================================
+//  Cách lấy cấu hình:
+//  1. Vào Firebase Console (https://console.firebase.google.com).
+//  2. Bấm vào biểu tượng Bánh răng (⚙️ Settings) -> Project settings.
+//  3. Cuộn xuống phần "Your apps" -> Chọn ứng dụng Web (biểu tượng </>)
+//  4. Copy các chuỗi giá trị tương ứng trong khối `firebaseConfig`.
+// ====================================================================
 const firebaseConfig = {
-  apiKey: "DÁN_API_KEY_CỦA_BẠN",
-  authDomain: "DÁN_AUTH_DOMAIN_CỦA_BẠN",
-  projectId: "DÁN_PROJECT_ID_CỦA_BẠN",
-  storageBucket: "DÁN_STORAGE_BUCKET_CỦA_BẠN",
-  messagingSenderId: "DÁN_SENDER_ID_CỦA_BẠN",
-  appId: "DÁN_APP_ID_CỦA_BẠN"
+  apiKey: "AIzaSyBZv67MmWMHSardast27MWV7p5GJkB9PiI",
+  authDomain: "meovacweb.firebaseapp.com",
+  projectId: "meovacweb",
+  storageBucket: "meovacweb.firebasestorage.app",
+  messagingSenderId: "286774009484",
+  appId: "1:286774009484:web:4fb6f6ce054f9c3b93e5a9"
 };
 
-// Khởi tạo Firebase
+// Khởi tạo ứng dụng Firebase
 const app = initializeApp(firebaseConfig);
 
-// Khởi tạo và xuất Database (BẮT BUỘC PHẢI CÓ DÒNG NÀY)
+// Khởi tạo và xuất thực thể Firestore Database với tên 'db'
 export const db = getFirestore(app);
