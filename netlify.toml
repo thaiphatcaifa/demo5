@@ -1,0 +1,10 @@
+# Cấu hình deploy Netlify cho Tâm Bản Homestay
+[build]
+  command = "npm run build"   # Vite build ra thư mục dist
+  publish = "dist"            # Netlify lấy nội dung từ dist
+
+# SPA fallback: mọi đường dẫn trả về index.html (React Router xử lý phía client)
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
